@@ -1,0 +1,10 @@
+- wrap_layout :layout do
+  article.article
+    header.article-header
+		h1= data.page.title
+    .article-meta
+    .content
+		= yield
+		.nav-article-footer
+			a.icon-home href="/"
+				span.is-vishidden Home

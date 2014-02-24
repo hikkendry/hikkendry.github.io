@@ -1,0 +1,1808 @@
+/*------------------------------------*\
+    $TABLE OF CONTENTS 
+    based generally on Harry Roberts excellent CSS Guidelines https://github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
+/**
+ * VARIABLES..............................Declarations of Sass variables 
+ * .....Colors
+ * .....Typography
+ * .....Layout
+ * .....Defaults
+ * .....Breakpoints
+ * MIXINS.................................Sass mixins 
+ * RESET..................................Set reset defaults
+ * GLOBAL CLASSES.........................Set reset defaults
+ * GLOBAL ELEMENTS........................Establish global styles
+ * .....Main
+ * .....Headings
+ * .....Text-related elements (p, blockquote, lists)
+ * .....Defaults
+ * .....Breakpoints
+ * TYPOGRAPHY------------------------------
+ * MEDIA------------------------------
+ * LAYOUT------------------------------
+ * NAVIGATION------------------------------
+ * TOC To Be Continued
+ */
+/*
+* Scut, a collection of Sass utilities to ease and improve our implementations of common style-code patterns.
+* v0.8.0
+* Docs at http://davidtheclark.github.io/scut
+*/
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2013 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Synthview Type Design
+ * License URL: http://www.fontspring.com/fflicense/synthview
+ *
+ *
+ */
+
+@font-face {
+  font-family: 'novecento_sans_widenormal';
+  src: url("../fonts/Novecentosanswide-Normal-webfont.eot");
+  src: url("../fonts/Novecentosanswide-Normal-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Novecentosanswide-Normal-webfont.woff") format("woff"), url("../fonts/Novecentosanswide-Normal-webfont.ttf") format("truetype"), url("../fonts/Novecentosanswide-Normal-webfont.svg#novecento_sans_widenormal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Icon Font */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("../fonts/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanslight';
+  src: url("../fonts/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#open_sanslight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanslight_italic';
+  src: url("../fonts/OpenSans-LightItalic-webfont.eot");
+  src: url("../fonts/OpenSans-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-LightItalic-webfont.woff") format("woff"), url("../fonts/OpenSans-LightItalic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-LightItalic-webfont.svg#open_sanslight_italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* Grids
+  Usage: @include grid-Xup;
+ */
+/* Grid 1up */
+/* Grid 2up */
+/* Grid 3up */
+/* Grid 4up */
+/* CSS Transition
+	Usage: @include transition(width,0.3s,ease-out);
+ */
+/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+	Usage: @include font-size(1, large);
+*/
+/* Rounded Corners */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/* line 61, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 100%;
+}
+
+/* line 64, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 16px;
+  line-height: 0.375em;
+}
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
+/* line 6, ../../source/scss/generic/_reset.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../../source/scss/generic/_reset.scss */
+html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, legend, label, table, header, footer, nav, section, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 15, ../../source/scss/generic/_reset.scss */
+header, footer, nav, section, article, hgroup, figure {
+  display: block;
+}
+
+/*------------------------------------*\
+    $GLOBAL ELEMENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $GLOBAL CLASSES
+\*------------------------------------*/
+/* Clearfix */
+/* line 6, ../../source/scss/base/_global-classes.scss */
+.cf, [role=main] {
+  *zoom: 1;
+}
+
+/* line 9, ../../source/scss/base/_global-classes.scss */
+.cf:before, [role=main]:before, .cf:after, [role=main]:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 14, ../../source/scss/base/_global-classes.scss */
+.cf:after, [role=main]:after {
+  clear: both;
+}
+
+/* Completely remove from the flow and screen readers. */
+/* line 19, ../../source/scss/base/_global-classes.scss */
+.is-hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+/* line 25, ../../source/scss/base/_global-classes.scss */
+.is-vishidden, .org {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Floats */
+/* line 36, ../../source/scss/base/_global-classes.scss */
+.right {
+  float: right;
+  padding: 0 0 1rem 1rem;
+}
+
+/* line 41, ../../source/scss/base/_global-classes.scss */
+.right-search {
+  float: right;
+  padding: 0 0 1rem 0;
+}
+
+/* line 46, ../../source/scss/base/_global-classes.scss */
+.left {
+  float: left;
+  padding: 0 1rem 1rem 0;
+}
+
+/* Text-Align */
+/* line 52, ../../source/scss/base/_global-classes.scss */
+.align-right {
+  text-align: right;
+}
+
+/* line 56, ../../source/scss/base/_global-classes.scss */
+.align-center {
+  text-align: center;
+}
+
+/* line 60, ../../source/scss/base/_global-classes.scss */
+.align-left {
+  text-align: left;
+}
+
+/* Display Classes */
+@media all and (max-width: 46.8em) {
+  /* line 65, ../../source/scss/base/_global-classes.scss */
+  .hide-small {
+    display: none;
+  }
+}
+
+@media all and (min-width: 46.8em) and (max-width: 50em) {
+  /* line 71, ../../source/scss/base/_global-classes.scss */
+  .hide-med {
+    display: none;
+  }
+}
+
+@media all and (min-width: 50em) {
+  /* line 77, ../../source/scss/base/_global-classes.scss */
+  .hide-large {
+    display: none;
+  }
+}
+
+/* line 84, ../../source/scss/base/_global-classes.scss */
+.valid {
+  color: #3bb04b;
+}
+
+/* line 88, ../../source/scss/base/_global-classes.scss */
+.error {
+  color: #e41e30;
+}
+
+/* line 92, ../../source/scss/base/_global-classes.scss */
+.warning {
+  color: #e89a2d;
+}
+
+/* line 97, ../../source/scss/base/_global-classes.scss */
+.information {
+  color: #3baada;
+}
+
+/* line 1, ../../source/scss/base/_main.scss */
+body {
+  background-color: white;
+  line-height: 1.5;
+  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5em;
+  color: #333333;
+  font-size: 0.93em;
+}
+@media (min-width: 46.8em) {
+  /* line 1, ../../source/scss/base/_main.scss */
+  body {
+    font-size: 1em;
+  }
+}
+@media (min-width: 73em) {
+  /* line 1, ../../source/scss/base/_main.scss */
+  body {
+    font-size: 1.0625em;
+  }
+}
+
+/* Links */
+/* line 2, ../../source/scss/base/_links.scss */
+a {
+  color: #3baada;
+  text-decoration: none;
+  outline: 0;
+}
+/* line 7, ../../source/scss/base/_links.scss */
+a:hover, a:focus {
+  color: #e04f2e;
+}
+
+/* line 11, ../../source/scss/base/_headings.scss */
+h1,
+h2,
+h3 {
+  font-family: "open_sanslight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+}
+
+/* line 17, ../../source/scss/base/_headings.scss */
+h1,
+.alpha {
+  font-size: 2.25em;
+  line-height: 1.16667em;
+  margin: 0.5em 0 0.5em 0;
+}
+
+/* line 23, ../../source/scss/base/_headings.scss */
+h2,
+.beta,
+.nav-article-footer {
+  font-size: 1.875em;
+  line-height: 1.2em;
+  margin: 0.6em 0 0.6em 0;
+}
+
+/* line 29, ../../source/scss/base/_headings.scss */
+h3,
+.gamma,
+blockquote {
+  font-size: 1.375em;
+  line-height: 1.36364em;
+  margin: 0.81818em 0 0.81818em 0;
+}
+
+/* line 35, ../../source/scss/base/_headings.scss */
+h4,
+.delta {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin: 0 0 0.9em 0;
+}
+
+/* line 41, ../../source/scss/base/_headings.scss */
+h5,
+.epsilon {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  margin: 0 0 1em 0;
+}
+
+/* line 47, ../../source/scss/base/_headings.scss */
+h6,
+.zeta {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: 0 0 1.125em 0;
+}
+
+/* line 52, ../../source/scss/base/_headings.scss */
+.giga {
+  font-size: 4.125em;
+  line-height: 1.09091em;
+  margin: 0.27273em 0 0.27273em 0;
+}
+
+/* line 57, ../../source/scss/base/_headings.scss */
+.mega {
+  font-size: 3.5em;
+  line-height: 1.07143em;
+  margin: 0.32143em 0 0.32143em 0;
+}
+
+/* line 62, ../../source/scss/base/_headings.scss */
+.kilo {
+  font-size: 2.875em;
+  line-height: 1.17391em;
+  margin: 0.3913em 0 0.3913em 0;
+}
+
+/* line 67, ../../source/scss/base/_headings.scss */
+.small, .site-footer {
+  font-size: 0.875em;
+  line-height: 1.28571em;
+  margin: 0 0 1.28571em 0;
+}
+
+/* line 72, ../../source/scss/base/_headings.scss */
+.milli {
+  font-size: 0.625em;
+  line-height: 1.8em;
+  margin: 0 0 1.8em 0;
+}
+
+/* line 82, ../../source/scss/base/_headings.scss */
+.subheading {
+  font-family: "open_sanslight_italic", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-weight: normal;
+}
+
+/* Text-Related Elements */
+/* line 2, ../../source/scss/base/_text.scss */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Blockquote */
+/* line 7, ../../source/scss/base/_text.scss */
+blockquote {
+  font-family: "open_sanslight_italic", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  color: gray;
+  padding-left: 2rem;
+  border-left: 1px solid gray;
+  margin-bottom: 1rem;
+}
+
+/* Horizontal Rule */
+/* line 17, ../../source/scss/base/_text.scss */
+hr {
+  border: 0;
+  height: 2px;
+  background: #333333;
+  margin: 2rem 0;
+}
+
+/* line 24, ../../source/scss/base/_text.scss */
+abbr {
+  border-bottom: 1px dotted #333333;
+  cursor: help;
+}
+
+/* line 1, ../../source/scss/base/_lists.scss */
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Definition Lists */
+/* line 8, ../../source/scss/base/_lists.scss */
+dl {
+  overflow: hidden;
+  margin: 0 0 1rem;
+}
+
+/* line 13, ../../source/scss/base/_lists.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 17, ../../source/scss/base/_lists.scss */
+dd {
+  margin-left: 0;
+}
+
+/*------------------------------------*\
+    $MEDIA ELEMENTS
+\*------------------------------------*/
+/* Flexible Media */
+/* line 6, ../../source/scss/base/_media.scss */
+img, video, object {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 11, ../../source/scss/base/_media.scss */
+iframe {
+  margin-bottom: 1rem;
+}
+
+/* line 15, ../../source/scss/base/_media.scss */
+figure {
+  margin-bottom: 1rem;
+}
+/* line 17, ../../source/scss/base/_media.scss */
+figure img {
+  margin-bottom: 0.25rem;
+}
+
+/* line 21, ../../source/scss/base/_media.scss */
+figcaption, .caption {
+  font-style: italic;
+}
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/* line 5, ../../source/scss/base/_forms.scss */
+form > div {
+  margin-bottom: 1rem;
+}
+
+/* line 9, ../../source/scss/base/_forms.scss */
+form ol, form ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* line 14, ../../source/scss/base/_forms.scss */
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 20, ../../source/scss/base/_forms.scss */
+label {
+  display: block;
+  padding-bottom: 0.25rem;
+}
+
+/* line 25, ../../source/scss/base/_forms.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 31, ../../source/scss/base/_forms.scss */
+input, textarea {
+  width: 100%;
+  border: 1px solid gray;
+  padding: 0.5rem 0.65rem;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 38, ../../source/scss/base/_forms.scss */
+input[type=text], input[type=search], input[type=url], input[type=number], textarea {
+  -webkit-appearance: none;
+}
+
+/* line 42, ../../source/scss/base/_forms.scss */
+button, input[type="submit"] {
+  padding: 0.5rem;
+  background: #333333;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+/* line 50, ../../source/scss/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.3em;
+}
+
+/* line 55, ../../source/scss/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* line 61, ../../source/scss/base/_forms.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 66, ../../source/scss/base/_forms.scss */
+.field-container {
+  margin-bottom: 1rem;
+}
+
+/* line 72, ../../source/scss/base/_forms.scss */
+.inline-form fieldset, .inline-form .inline-container {
+  position: relative;
+}
+/* line 76, ../../source/scss/base/_forms.scss */
+.inline-form input[type=submit], .inline-form button, .inline-form .btn {
+  font-size: 0.93em;
+  padding: 0.65rem 1.3rem;
+  background: #333333;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: auto;
+}
+/* line 86, ../../source/scss/base/_forms.scss */
+.inline-form input[type=submit]:hover, .inline-form input[type=submit]:focus, .inline-form button:hover, .inline-form button:focus, .inline-form .btn:hover, .inline-form .btn:focus {
+  background: gray;
+  color: white;
+}
+
+/* line 94, ../../source/scss/base/_forms.scss */
+.inline-search-results-form {
+  width: 100%;
+}
+@media all and (min-width: 46.8em) {
+  /* line 94, ../../source/scss/base/_forms.scss */
+  .inline-search-results-form {
+    width: 82%;
+  }
+}
+/* line 101, ../../source/scss/base/_forms.scss */
+.inline-search-results-form fieldset, .inline-search-results-form .inline-container {
+  position: relative;
+}
+/* line 105, ../../source/scss/base/_forms.scss */
+.inline-search-results-form input[type=submit], .inline-search-results-form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: auto;
+}
+
+/* Validation */
+/* line 115, ../../source/scss/base/_forms.scss */
+.has-error {
+  border-color: #e41e30;
+}
+
+/* line 118, ../../source/scss/base/_forms.scss */
+.is-valid {
+  border-color: #3bb04b;
+}
+
+/*------------------------------------*\
+    $SPECIFIC FORMS
+\*------------------------------------*/
+/* Search Form */
+/* line 130, ../../source/scss/base/_forms.scss */
+.search-field {
+  padding-right: 3em;
+}
+
+/* line 133, ../../source/scss/base/_forms.scss */
+.inline-form .search-submit {
+  background: none;
+  padding: 0.78em 1em;
+  border: 0;
+  border-left: 1px solid gray;
+  color: gray;
+}
+
+/*------------------------------------*\
+    $Table
+\*------------------------------------*/
+/* line 4, ../../source/scss/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid gray;
+  width: 100%;
+}
+
+/* line 10, ../../source/scss/base/_tables.scss */
+th {
+  text-align: left;
+  border: 1px solid gray;
+  padding: 0.2em;
+}
+
+/* line 15, ../../source/scss/base/_tables.scss */
+td {
+  border: 1px solid gray;
+  padding: 0.2em;
+}
+
+/* line 1, ../../source/scss/base/_animation.scss */
+.animate-fade {
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+/* line 4, ../../source/scss/base/_animation.scss */
+.animate-fade:hover {
+  opacity: 0;
+}
+
+/* line 10, ../../source/scss/base/_animation.scss */
+.animate-move > .demo-shape {
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+	$LAYOUT
+\*------------------------------------*/
+/* Layout Container */
+/* line 6, ../../source/scss/objects/_layout.scss */
+.wrapper, .page {
+  *zoom: 1;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 0;
+}
+/* line 38, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.wrapper:after, .page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*------------------------------------*\
+    $TEMPLATES
+\*------------------------------------*/
+/* line 9, ../../source/scss/generic/_mixins.scss */
+.about .grid-item {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+@media (min-width: 50em) {
+  /* line 9, ../../source/scss/generic/_mixins.scss */
+  .about .grid-item .grid-item {
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+@media (min-width: 50em) and (min-width: 24em) {
+  /* line 30, ../../source/scss/generic/_mixins.scss */
+  .about .grid-item {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 251, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .about .grid-item:nth-child(2n) {
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 184, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .about .grid-item:nth-child(3n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 50em) {
+  /* line 30, ../../source/scss/objects/_layout.scss */
+  .pagenav {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+    padding-left: 2rem;
+    position: fixed;
+  }
+
+  /* line 35, ../../source/scss/objects/_layout.scss */
+  .main {
+    width: 74.57627%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 37, ../../source/scss/objects/_layout.scss */
+  .main .content, .main .article-header, .main .article-meta {
+    width: 88.63636%;
+    float: left;
+    margin-right: 2.27273%;
+  }
+  /* line 41, ../../source/scss/objects/_layout.scss */
+  .main .article-meta {
+    margin: 0;
+  }
+}
+@media (min-width: 73em) {
+  /* line 50, ../../source/scss/objects/_layout.scss */
+  .main .article-meta {
+    width: 28.57143%;
+    float: right;
+    margin-right: 0;
+    padding: 0 2rem;
+  }
+  /* line 54, ../../source/scss/objects/_layout.scss */
+  .main .article-header {
+    width: 100%;
+    float: left;
+    margin-right: 2.04082%;
+    padding-right: 25.42373%;
+  }
+  /* line 58, ../../source/scss/objects/_layout.scss */
+  .main .content {
+    width: 69.38776%;
+    float: left;
+    margin-right: 2.04082%;
+  }
+}
+/*------------------------------------*\
+	THIS TO FIX THE ARTICLE META
+
+	@include at-breakpoint($bp-xl 12) {
+	.main{
+		.article-meta{
+			@include container;
+			padding: 0;
+			position: fixed;
+			right: 0;
+			height: 0;
+
+			.intro{	
+				@include span-columns(3 omega, 12);
+				padding: 0 $pad-double;
+			}
+		}
+		.article-header {
+			@include span-columns(10, 10);
+			@include suffix(3);
+		}
+		.content{
+			@include span-columns(7, 10);
+		}
+	}
+}
+
+\*------------------------------------*/
+/*------------------------------------*\
+	$GRIDS
+\*------------------------------------*/
+/* Grid Item */
+/* line 9, ../../source/scss/generic/_mixins.scss */
+.grid-1up .grid-item {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 9, ../../source/scss/generic/_mixins.scss */
+.grid-2up .grid-item .grid-item {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+@media (min-width: 24em) {
+  /* line 16, ../../source/scss/generic/_mixins.scss */
+  .grid-2up .grid-item {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 251, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .grid-2up .grid-item:nth-child(3n) {
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 184, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .grid-2up .grid-item:nth-child(2n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 9, ../../source/scss/generic/_mixins.scss */
+.grid-3up .grid-item .grid-item {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+@media (min-width: 24em) {
+  /* line 30, ../../source/scss/generic/_mixins.scss */
+  .grid-3up .grid-item {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 251, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .grid-3up .grid-item:nth-child(2n) {
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 184, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .grid-3up .grid-item:nth-child(3n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 9, ../../source/scss/generic/_mixins.scss */
+.grid-4up .grid-item .grid-item {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+@media (min-width: 24em) {
+  /* line 44, ../../source/scss/generic/_mixins.scss */
+  .grid-4up .grid-item {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 251, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .grid-4up .grid-item:nth-child(3n) {
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 184, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .grid-4up .grid-item:nth-child(2n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 50em) {
+  /* line 44, ../../source/scss/generic/_mixins.scss */
+  .grid-4up .grid-item {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 251, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .grid-4up .grid-item:nth-child(2n) {
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 184, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .grid-4up .grid-item:nth-child(4n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+/* line 1, ../../source/scss/objects/_header.scss */
+.header {
+  padding: 0;
+  border-bottom: 1px solid #eeeeee;
+  text-align: center;
+}
+@media (min-width: 50em) {
+  /* line 1, ../../source/scss/objects/_header.scss */
+  .header {
+    border: none;
+    text-align: left;
+  }
+}
+
+/* line 12, ../../source/scss/objects/_header.scss */
+.logo {
+  max-width: 10em;
+  padding-top: 1rem;
+}
+@media (min-width: 50em) {
+  /* line 12, ../../source/scss/objects/_header.scss */
+  .logo {
+    position: static;
+    margin: 0;
+    padding: 2rem 0 0.5rem 0;
+    max-width: 9em;
+  }
+}
+
+/* line 28, ../../source/scss/objects/_header.scss */
+.nav-toggle, .home-link {
+  float: left;
+  display: block;
+  padding: 0.9rem 1rem 0.7rem;
+  font-size: 1.3rem;
+  line-height: 1;
+  border-right: 1px solid #dbdbdb;
+}
+@media (min-width: 50em) {
+  /* line 28, ../../source/scss/objects/_header.scss */
+  .nav-toggle, .home-link {
+    display: none;
+  }
+}
+
+/* line 45, ../../source/scss/objects/_header.scss */
+.contact-toggle {
+  float: right;
+  display: block;
+  padding: 0.9rem 1rem 0.7rem;
+  font-size: 1.3rem;
+  line-height: 1;
+  border-left: 1px solid #dbdbdb;
+}
+@media (min-width: 50em) {
+  /* line 45, ../../source/scss/objects/_header.scss */
+  .contact-toggle {
+    display: none;
+  }
+}
+
+/* line 58, ../../source/scss/objects/_header.scss */
+.home-link, .contact-toggle {
+  color: #333333;
+}
+/* line 61, ../../source/scss/objects/_header.scss */
+.home-link:hover, .contact-toggle:hover {
+  color: #e04f2e;
+}
+
+/* line 66, ../../source/scss/objects/_header.scss */
+.search-form {
+  overflow: hidden;
+  max-height: 0;
+}
+@media (min-width: 50em) {
+  /* line 66, ../../source/scss/objects/_header.scss */
+  .search-form {
+    float: right;
+    max-height: none;
+    margin: 0.65em 0.5em 0 0;
+  }
+}
+
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+/* line 5, ../../source/scss/objects/_nav.scss */
+.nav, .contact {
+  clear: both;
+  overflow: hidden;
+  max-height: 0;
+}
+/* line 10, ../../source/scss/objects/_nav.scss */
+.nav a, .contact a {
+  display: block;
+  padding: 1rem;
+  border-top: 1px solid #eeeeee;
+}
+/* line 16, ../../source/scss/objects/_nav.scss */
+.nav.active, .active.contact {
+  max-height: 40em;
+}
+@media (min-width: 50em) {
+  /* line 5, ../../source/scss/objects/_nav.scss */
+  .nav, .contact {
+    max-height: none;
+    padding-bottom: 1rem;
+  }
+  /* line 28, ../../source/scss/objects/_nav.scss */
+  .nav a, .contact a {
+    padding: 0.5rem 0;
+    border: 0;
+  }
+}
+
+/* line 36, ../../source/scss/objects/_nav.scss */
+.contact {
+  text-align: center;
+  border-top: 1px solid #eeeeee;
+}
+/* line 41, ../../source/scss/objects/_nav.scss */
+.contact .adr {
+  display: block;
+  padding-top: 1rem;
+}
+/* line 46, ../../source/scss/objects/_nav.scss */
+.contact a {
+  border: none;
+  padding: none;
+}
+@media (min-width: 50em) {
+  /* line 36, ../../source/scss/objects/_nav.scss */
+  .contact {
+    text-align: left;
+  }
+}
+
+/* line 56, ../../source/scss/objects/_nav.scss */
+.nav-article-footer {
+  text-align: center;
+}
+
+/* line 62, ../../source/scss/objects/_nav.scss */
+.pagination {
+  overflow: hidden;
+}
+/* line 65, ../../source/scss/objects/_nav.scss */
+.pagination li {
+  float: left;
+  border-right: 1px solid #eeeeee;
+}
+/* line 69, ../../source/scss/objects/_nav.scss */
+.pagination li:last-child {
+  border: 0;
+}
+/* line 74, ../../source/scss/objects/_nav.scss */
+.pagination a {
+  padding: 1rem;
+}
+
+/*------------------------------------*\
+    $MAIN CONTENT AREA
+\*------------------------------------*/
+/* line 4, ../../source/scss/objects/_main.scss */
+[role=main] {
+  padding: 0.5rem 0.5rem 2rem;
+  overflow: hidden;
+}
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+/* line 1175, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/scut-0.8.0/dist/_scut.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 1179, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/scut-0.8.0/dist/_scut.scss */
+.wrapper, .page {
+  min-height: 100%;
+  margin-bottom: -2em page site-footer;
+}
+/* line 1182, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/scut-0.8.0/dist/_scut.scss */
+.wrapper:after, .page:after {
+  content: "";
+  display: block;
+}
+
+/* line 1188, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/scut-0.8.0/dist/_scut.scss */
+.wrapper:after, .page:after,
+.scut-sticky {
+  height: 2em page site-footer;
+}
+
+/* line 6, ../../source/scss/objects/_footer.scss */
+.site-footer {
+  height: 4em;
+  padding: 1rem;
+  border-top: 1px solid #d6d6cf;
+}
+
+/* line 14, ../../source/scss/objects/_footer.scss */
+.nav-footer {
+  margin: -1rem -1rem 1rem;
+}
+/* line 17, ../../source/scss/objects/_footer.scss */
+.nav-footer li {
+  border-bottom: 1px solid #333333;
+}
+@media all and (min-width: 46.8em) {
+  /* line 17, ../../source/scss/objects/_footer.scss */
+  .nav-footer li {
+    border: 0;
+    float: left;
+  }
+}
+/* line 26, ../../source/scss/objects/_footer.scss */
+.nav-footer a {
+  display: block;
+  padding: 1rem;
+}
+
+/* line 32, ../../source/scss/objects/_footer.scss */
+.copyright {
+  color: #bbbbbb;
+}
+@media all and (min-width: 46.8em) {
+  /* line 32, ../../source/scss/objects/_footer.scss */
+  .copyright {
+    float: right;
+  }
+}
+
+/*------------------------------------*\
+    $TEXT Styles
+\*------------------------------------*/
+/* Global Font Classes */
+/* line 2, ../../source/scss/objects/_text.scss */
+.font-secondary {
+  font-family: "open_sanslight_italic", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
+
+/* line 7, ../../source/scss/objects/_text.scss */
+.intro {
+  font-family: "open_sanslight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.0625em;
+}
+@media (min-width: 50em) {
+  /* line 7, ../../source/scss/objects/_text.scss */
+  .intro {
+    font-size: 1.375em;
+    line-height: 1.36364em;
+  }
+}
+
+/* line 17, ../../source/scss/objects/_text.scss */
+.pullquote {
+  font-family: "open_sanslight_italic", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.4375em;
+}
+
+/* line 24, ../../source/scss/objects/_text.scss */
+.text a {
+  text-decoration: underline;
+}
+/* line 28, ../../source/scss/objects/_text.scss */
+.text ul {
+  list-style: disc;
+  margin: 0 0 1rem 1.2em;
+}
+/* line 32, ../../source/scss/objects/_text.scss */
+.text ul ul {
+  margin-bottom: 0;
+}
+/* line 37, ../../source/scss/objects/_text.scss */
+.text ol {
+  list-style: decimal;
+  margin: 0 0 1rem 1.2em;
+}
+/* line 41, ../../source/scss/objects/_text.scss */
+.text ol ol {
+  margin-bottom: 0;
+}
+
+/* Review Grade Tile */
+/* line 48, ../../source/scss/objects/_text.scss */
+.grade {
+  display: block;
+  font-weight: bold;
+  background: gray;
+  color: white;
+  min-height: 4.5rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+/* Eyebrow */
+/* line 59, ../../source/scss/objects/_text.scss */
+.eyebrow {
+  background: #333333;
+  color: white;
+  padding: 0.2em;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+/* line 67, ../../source/scss/objects/_text.scss */
+.eyebrow-image {
+  position: relative;
+}
+/* line 70, ../../source/scss/objects/_text.scss */
+.eyebrow-image img {
+  position: relative;
+  z-index: 0;
+}
+/* line 75, ../../source/scss/objects/_text.scss */
+.eyebrow-image .eyebrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* line 83, ../../source/scss/objects/_text.scss */
+.vcard {
+  font-family: "open_sanslight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  margin: 0;
+}
+
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
+/* line 1, ../../source/scss/objects/_icons.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 15, ../../source/scss/objects/_icons.scss */
+.icon-twitter:before {
+  content: "\e600";
+}
+
+/* line 18, ../../source/scss/objects/_icons.scss */
+.icon-facebook:before {
+  content: "\e601";
+}
+
+/* line 21, ../../source/scss/objects/_icons.scss */
+.icon-youtube:before {
+  content: "\e602";
+}
+
+/* line 24, ../../source/scss/objects/_icons.scss */
+.icon-menu:before {
+  content: "\e604";
+}
+
+/* line 27, ../../source/scss/objects/_icons.scss */
+.icon-search:before {
+  content: "\e605";
+}
+
+/* line 30, ../../source/scss/objects/_icons.scss */
+.icon-checkmark:before {
+  content: "\e608";
+}
+
+/* line 33, ../../source/scss/objects/_icons.scss */
+.icon-arrow-left:before {
+  content: "\e609";
+}
+
+/* line 36, ../../source/scss/objects/_icons.scss */
+.icon-arrow-right:before {
+  content: "\e60a";
+}
+
+/* line 39, ../../source/scss/objects/_icons.scss */
+.icon-arrow-up:before {
+  content: "\e60b";
+}
+
+/* line 42, ../../source/scss/objects/_icons.scss */
+.icon-play:before {
+  content: "\e607";
+}
+
+/* line 45, ../../source/scss/objects/_icons.scss */
+.icon-envelope:before {
+  content: "\e617";
+}
+
+/* line 48, ../../source/scss/objects/_icons.scss */
+.icon-home:before {
+  content: "\e606";
+}
+
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+/* line 4, ../../source/scss/objects/_buttons.scss */
+.btn {
+  display: inline-block;
+  background: #e89a2d;
+  color: white;
+  line-height: 1;
+  font-weight: bold;
+  padding: 1rem;
+  border: 0;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 15, ../../source/scss/objects/_buttons.scss */
+.btn:hover, .btn:focus {
+  color: white;
+}
+/* line 19, ../../source/scss/objects/_buttons.scss */
+.btn.disabled {
+  background: #eeeeee;
+  color: #bbbbbb;
+}
+
+/* line 25, ../../source/scss/objects/_buttons.scss */
+.btn-small {
+  padding: 0.5rem;
+}
+
+/* line 29, ../../source/scss/objects/_buttons.scss */
+.btn-large {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  background: #e89a2d;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+/* line 38, ../../source/scss/objects/_buttons.scss */
+.text-btn {
+  font-style: italic;
+}
+
+/* Generic Placeholder Brick: REMOVE FOR PRODUCTION */
+/* line 2, ../../source/scss/objects/_blocks.scss */
+.brick {
+  background: #dcdddc;
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* Block */
+/* line 11, ../../source/scss/objects/_blocks.scss */
+.block {
+  overflow: hidden;
+}
+/* line 14, ../../source/scss/objects/_blocks.scss */
+.block p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 19, ../../source/scss/objects/_blocks.scss */
+.headline {
+  line-height: 1.2;
+}
+
+/* Hero Block */
+/* line 24, ../../source/scss/objects/_blocks.scss */
+.block-hero {
+  margin-bottom: 0.5rem;
+}
+/* line 28, ../../source/scss/objects/_blocks.scss */
+.block-hero .b-thumb img {
+  display: block;
+}
+@media all and (min-width: 50em) {
+  /* line 24, ../../source/scss/objects/_blocks.scss */
+  .block-hero {
+    position: relative;
+  }
+  /* line 36, ../../source/scss/objects/_blocks.scss */
+  .block-hero .b-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1.5rem;
+  }
+}
+
+/* Block Thumbnail with Headline */
+/* line 49, ../../source/scss/objects/_blocks.scss */
+.block-thumb {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+/* line 54, ../../source/scss/objects/_blocks.scss */
+.block-thumb .b-inner {
+  display: table-row;
+  vertical-align: top;
+  overflow: hidden;
+}
+@media all and (min-width: 29.75em) {
+  /* line 60, ../../source/scss/objects/_blocks.scss */
+  .block-thumb .b-thumb {
+    display: table-cell;
+    vertical-align: top;
+    width: 30%;
+    max-width: 10em;
+  }
+  /* line 67, ../../source/scss/objects/_blocks.scss */
+  .block-thumb .b-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+@media all and (min-width: 29.75em) {
+  /* line 75, ../../source/scss/objects/_blocks.scss */
+  .block-thumb .b-text {
+    display: table-cell;
+    width: 70%;
+    padding: 0 1rem;
+  }
+}
+
+/* Block Headline Summary */
+/* line 87, ../../source/scss/objects/_blocks.scss */
+.block-headline-summary a {
+  display: block;
+  padding: 0.5rem;
+}
+
+/* Block Inset */
+/* line 94, ../../source/scss/objects/_blocks.scss */
+.block-inset {
+  position: relative;
+}
+/* line 97, ../../source/scss/objects/_blocks.scss */
+.block-inset .b-thumb {
+  position: relative;
+  z-index: 0;
+}
+/* line 101, ../../source/scss/objects/_blocks.scss */
+.block-inset .b-thumb img {
+  display: block;
+}
+
+/* Hero Block */
+/* line 108, ../../source/scss/objects/_blocks.scss */
+.block-hero {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+/* line 112, ../../source/scss/objects/_blocks.scss */
+.block-hero .headline {
+  font-size: 1.1em;
+}
+/* line 116, ../../source/scss/objects/_blocks.scss */
+.block-hero .b-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5rem;
+}
+
+/* Block Thumb with Summary */
+/* line 129, ../../source/scss/objects/_blocks.scss */
+.block-thumb-summary .b-thumb {
+  float: left;
+  width: 50%;
+}
+/* line 134, ../../source/scss/objects/_blocks.scss */
+.block-thumb-summary .b-text {
+  margin-left: 50%;
+  padding: 0.5rem;
+}
+
+/* line 2, ../../source/scss/objects/_lists.scss */
+.inline-list li {
+  display: inline-block;
+}
+
+/* Social List */
+/* line 9, ../../source/scss/objects/_lists.scss */
+.social-list li {
+  margin: 0 0.4rem 1rem 0;
+}
+/* line 13, ../../source/scss/objects/_lists.scss */
+.social-list a {
+  font-size: 1.6em;
+}
+
+/* Headline List */
+/* line 20, ../../source/scss/objects/_lists.scss */
+.headline-list {
+  margin-bottom: 1rem;
+}
+/* line 23, ../../source/scss/objects/_lists.scss */
+.headline-list.flush {
+  margin: 0;
+}
+/* line 27, ../../source/scss/objects/_lists.scss */
+.headline-list h4 {
+  font-weight: normal;
+}
+/* line 31, ../../source/scss/objects/_lists.scss */
+.headline-list li {
+  padding: 0.25rem 0;
+  border-top: 1px solid #dddddd;
+}
+
+/* Post List */
+/* line 39, ../../source/scss/objects/_lists.scss */
+.post-list li {
+  margin-bottom: 1rem;
+}
+
+/* Bullet List */
+/* line 45, ../../source/scss/objects/_lists.scss */
+.bullet-list {
+  list-style: square;
+  margin: 0 0 1em 1.2em;
+  line-height: 1.3;
+}
+/* line 50, ../../source/scss/objects/_lists.scss */
+.bullet-list li {
+  margin-bottom: 1rem;
+}
+
+/* Text List */
+/* line 56, ../../source/scss/objects/_lists.scss */
+.text-list {
+  margin: 0 0 1em;
+  line-height: 1.3;
+}
+/* line 60, ../../source/scss/objects/_lists.scss */
+.text-list li {
+  margin-bottom: 1rem;
+}
+
+/* line 1, ../../source/scss/objects/_tooltip.scss */
+.tooltip-container {
+  display: inline-block;
+  position: relative;
+}
+/* line 6, ../../source/scss/objects/_tooltip.scss */
+.tooltip-container:hover .tooltip {
+  display: block;
+}
+
+/* line 12, ../../source/scss/objects/_tooltip.scss */
+.tooltip-link {
+  background: #d6d6cf;
+}
+
+/* line 16, ../../source/scss/objects/_tooltip.scss */
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  width: 18em;
+  padding: 1rem;
+  background: white;
+  border: 1px solid gray;
+  box-shadow: 0.3em 0.3em 1em 0 rgba(0, 0, 0, 0.2);
+}
+/* line 27, ../../source/scss/objects/_tooltip.scss */
+.tooltip h2 {
+  margin-top: 0;
+}
+@media all and (min-width: 24em) {
+  /* line 16, ../../source/scss/objects/_tooltip.scss */
+  .tooltip {
+    width: 22em;
+  }
+}
+@media all and (min-width: 29.75em) {
+  /* line 16, ../../source/scss/objects/_tooltip.scss */
+  .tooltip {
+    width: 27em;
+  }
+}
+@media all and (min-width: 39.8em) {
+  /* line 16, ../../source/scss/objects/_tooltip.scss */
+  .tooltip {
+    width: 30em;
+  }
+}
+
+/* line 1, ../../source/scss/objects/_accordion.scss */
+.accordion {
+  margin-bottom: 1rem;
+}
+
+/* line 5, ../../source/scss/objects/_accordion.scss */
+.acc-handle {
+  background: #131313;
+  color: white;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  padding: 0.5rem;
+  border-bottom: 1px solid #dddddd;
+}
+/* line 14, ../../source/scss/objects/_accordion.scss */
+.acc-handle:after {
+  content: "+";
+  float: right;
+}
+/* line 19, ../../source/scss/objects/_accordion.scss */
+.acc-handle:hover {
+  color: white;
+  background: #333333;
+}
+/* line 25, ../../source/scss/objects/_accordion.scss */
+.acc-handle.active {
+  background: #333333;
+}
+/* line 28, ../../source/scss/objects/_accordion.scss */
+.acc-handle.active:after {
+  content: "-";
+}
+
+/* line 1, ../../source/scss/objects/_tabs.scss */
+.tabs {
+  overflow: hidden;
+}
+/* line 4, ../../source/scss/objects/_tabs.scss */
+.tabs ul {
+  display: table;
+  width: 100%;
+}
+/* line 9, ../../source/scss/objects/_tabs.scss */
+.tabs li {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #dddddd;
+}
+/* line 14, ../../source/scss/objects/_tabs.scss */
+.tabs li:last-child {
+  border-right: 0;
+}
+/* line 19, ../../source/scss/objects/_tabs.scss */
+.tabs a {
+  display: block;
+  padding: 0.5rem;
+  background: gray;
+}
+/* line 24, ../../source/scss/objects/_tabs.scss */
+.tabs a:hover, .tabs a:focus {
+  background: #dddddd;
+}
+/* line 28, ../../source/scss/objects/_tabs.scss */
+.tabs a.active {
+  background: #333333;
+  color: white;
+}
+
+/* line 1, ../../source/scss/objects/_sections.scss */
+.section {
+  margin: 0 0 1rem;
+}
+
+/* line 5, ../../source/scss/objects/_sections.scss */
+.section-title {
+  margin-bottom: 0.5rem;
+}
+
+/* line 3, ../../source/scss/objects/_article.scss */
+.article-header h1 {
+  font-size: 2.5em;
+}
+
+/* line 8, ../../source/scss/objects/_article.scss */
+.byline {
+  font-size: 0.93em;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+/* Wordpress Caption */
+/* line 15, ../../source/scss/objects/_article.scss */
+.wp-caption-text {
+  font-style: italic;
+}
+
+/* line 21, ../../source/scss/objects/_article.scss */
+.review-summary .grade {
+  width: 4.5em;
+  float: left;
+  margin: 0 0.5rem 0 0;
+}
+/* line 27, ../../source/scss/objects/_article.scss */
+.review-summary .summary-text {
+  margin-left: 5em;
+}
+
+/* line 33, ../../source/scss/objects/_article.scss */
+.social-share {
+  font-size: 1.0625em;
+}
+/* line 36, ../../source/scss/objects/_article.scss */
+.social-share .icon-twitter {
+  color: #35ccff;
+}
+/* line 40, ../../source/scss/objects/_article.scss */
+.social-share .icon-facebook {
+  color: #03539e;
+}
+
+/* line 2, ../../source/scss/objects/_comments.scss */
+.comments li {
+  margin-bottom: 1rem;
+}
+
+/* line 7, ../../source/scss/objects/_comments.scss */
+.comment-container {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* line 12, ../../source/scss/objects/_comments.scss */
+.comment-meta {
+  float: left;
+  width: 6.5em;
+}
+/* line 16, ../../source/scss/objects/_comments.scss */
+.comment-meta img {
+  display: block;
+  border: 1px solid #eeeeee;
+  margin-bottom: 0.5rem;
+}
+
+/* line 23, ../../source/scss/objects/_comments.scss */
+.comment-name {
+  font-size: 0.75em;
+}
+
+/* line 27, ../../source/scss/objects/_comments.scss */
+.comment-text {
+  margin-left: 9em;
+}
