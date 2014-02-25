@@ -10,6 +10,10 @@ set :js_dir, 'assets/javascripts'
 set :css_dir, 'assets/stylesheets'
 set :images_dir, 'assets/images'
 
+ready do
+  sprockets.append_path File.join root, 'bower_components'
+end
+
 # Build-specific configuration
 configure :build do
 

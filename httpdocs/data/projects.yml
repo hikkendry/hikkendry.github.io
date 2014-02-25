@@ -1,8 +1,12 @@
-- title: Hyponik Website
-  meta:
-    - client: Hyponik
-      thumb: casestudies/2014/holder_thumb.jpg
-- title: Shure B2C Blog Website
-  meta:
-    - client: Shure
-      thumb: casestudies/2014/holder_thumb.jpg
+- title: Shure UK Blog
+  client: Shure
+  thumb: casestudies/2014/holder_thumb.jpg
+  file: shureukblog
+- title: Hyponik
+  client: Hyponik
+  thumb: casestudies/2014/holder_thumb.jpg
+  file: hyponik
+- title: The Daily Street
+  client: The Daily Street
+  thumb: casestudies/2014/holder_thumb.jpg
+  file: thedailystreet

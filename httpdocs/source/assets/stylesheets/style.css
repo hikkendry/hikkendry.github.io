@@ -721,7 +721,7 @@ td {
     $TEMPLATES
 \*------------------------------------*/
 /* line 9, ../../source/scss/generic/_mixins.scss */
-.about .grid-item {
+.case-studies .grid-item {
   width: 100%;
   float: left;
   margin-right: 1.69492%;
@@ -729,7 +729,7 @@ td {
 }
 @media (min-width: 50em) {
   /* line 9, ../../source/scss/generic/_mixins.scss */
-  .about .grid-item .grid-item {
+  .case-studies .grid-item .grid-item {
     width: 100%;
     float: left;
     margin-right: 1.69492%;
@@ -737,25 +737,77 @@ td {
 }
 @media (min-width: 50em) and (min-width: 24em) {
   /* line 30, ../../source/scss/generic/_mixins.scss */
-  .about .grid-item {
+  .case-studies .grid-item {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
   /* line 251, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
-  .about .grid-item:nth-child(2n) {
+  .case-studies .grid-item:nth-child(2n) {
     float: left;
     margin-right: 1.69492%;
   }
   /* line 184, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
-  .about .grid-item:nth-child(3n) {
+  .case-studies .grid-item:nth-child(3n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 9, ../../source/scss/generic/_mixins.scss */
+.clients .grid-item {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+@media (min-width: 50em) {
+  /* line 9, ../../source/scss/generic/_mixins.scss */
+  .clients .grid-item .grid-item {
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+@media (min-width: 50em) and (min-width: 24em) {
+  /* line 44, ../../source/scss/generic/_mixins.scss */
+  .clients .grid-item {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 251, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .clients .grid-item:nth-child(3n) {
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 184, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .clients .grid-item:nth-child(2n) {
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 50em) and (min-width: 50em) {
+  /* line 44, ../../source/scss/generic/_mixins.scss */
+  .clients .grid-item {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 251, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .clients .grid-item:nth-child(2n) {
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 184, ../../../../../.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/susy-1.0.9/sass/susy/_grid.scss */
+  .clients .grid-item:nth-child(4n) {
     float: right;
     margin-right: 0;
   }
 }
 
 @media (min-width: 50em) {
-  /* line 30, ../../source/scss/objects/_layout.scss */
+  /* line 39, ../../source/scss/objects/_layout.scss */
   .pagenav {
     width: 23.72881%;
     float: left;
@@ -764,39 +816,39 @@ td {
     position: fixed;
   }
 
-  /* line 35, ../../source/scss/objects/_layout.scss */
+  /* line 44, ../../source/scss/objects/_layout.scss */
   .main {
     width: 74.57627%;
     float: right;
     margin-right: 0;
   }
-  /* line 37, ../../source/scss/objects/_layout.scss */
+  /* line 46, ../../source/scss/objects/_layout.scss */
   .main .content, .main .article-header, .main .article-meta {
     width: 88.63636%;
     float: left;
     margin-right: 2.27273%;
   }
-  /* line 41, ../../source/scss/objects/_layout.scss */
+  /* line 50, ../../source/scss/objects/_layout.scss */
   .main .article-meta {
     margin: 0;
   }
 }
 @media (min-width: 73em) {
-  /* line 50, ../../source/scss/objects/_layout.scss */
+  /* line 59, ../../source/scss/objects/_layout.scss */
   .main .article-meta {
     width: 28.57143%;
     float: right;
     margin-right: 0;
     padding: 0 2rem;
   }
-  /* line 54, ../../source/scss/objects/_layout.scss */
+  /* line 63, ../../source/scss/objects/_layout.scss */
   .main .article-header {
     width: 100%;
     float: left;
     margin-right: 2.04082%;
     padding-right: 25.42373%;
   }
-  /* line 58, ../../source/scss/objects/_layout.scss */
+  /* line 67, ../../source/scss/objects/_layout.scss */
   .main .content {
     width: 69.38776%;
     float: left;
