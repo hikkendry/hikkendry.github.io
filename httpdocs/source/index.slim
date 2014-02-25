@@ -1,0 +1,28 @@
+---
+title: Index
+---
+.content
+  .grid1up
+    .grid-item
+      .block.block-hero
+        h1 Hikkendry deliver clear, effective design solutions. We create user focussed websites and apps, develop beautiful branding and produce precise print design.
+        br
+
+  .case-studies
+    - data.projects.each do |project|
+      .grid-item
+        .block.block-inset
+          a href= project["file"]
+            .b-thumb
+              == image_tag project["thumb"]
+            .b-text
+              h2.headline= project["title"]
+  h3.headline Our clients include:
+  .clients
+    - data.clients.each do |client|
+      .grid-item
+        .block.block-inset
+          .b-thumb
+            == image_tag client["logo"]
+          .b-text
+            h3.headline= client["name"]
