@@ -1,3 +1,7 @@
+html{
+	height: 100%;
+}
+
 body {
 	background-color: $white;
 	line-height: 1.5; 
@@ -6,6 +10,7 @@ body {
 	@include adjust-leading-to(4);
 	color: $gray-dark;
 	font-size: $font-size-slightly-smaller;
+	height: 100%;
 
 	@include at-breakpoint($bp-med 12) {
 		font-size: $font-size-norm;

@@ -16,11 +16,12 @@ $camel: #CABA99;
 $gray : #808080;
 $gray-light : #D6D6CF;
 $gray-light-2 : #eee;
-$gray-light-3 : #ddd;
-$gray-light-4 : #bbb;
-$gray-med : #666;
+$gray-light-3 : #d7d6d5;
+$gray-light-4 : #eaeaea;
+$gray-med : #4a4644;
 $gray-dark : #333;
-$gray-dark-2 : #131313;
+$gray-dark-2 : #35312f;
+
 $white : #fff;
 $black : #000;
 
@@ -40,8 +41,9 @@ $brand-linkedin: #217bc1;
 $font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 $font-secondary : "open_sanslight_italic","HelveticaNeue", "Helvetica", "Arial", sans-serif;
 //$font-titling : "novecento_sans_widenormal", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-titling : "open_sanslight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+// $font-titling : "open_sanslight", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 //$font-titling : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-titling : "novecento_sans_widemedium", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 
 $font-size-norm : 1em;
 $font-size-slightly-larger : 1.0625em;

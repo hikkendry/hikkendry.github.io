@@ -12,28 +12,51 @@
 
 .page{
 	@extend .wrapper;
+	background: $gray-dark-2;
 }
 
 /*------------------------------------*\
     $TEMPLATES
 \*------------------------------------*/
 
-.case-studies{
-	@include grid-1up;
+// .case-studies{
+// 	@include grid-1up;
+// 	@extend .cf;
 
-	@include at-breakpoint($bp-large 12) {
-		@include grid-3up;
-	}
+// 	@include at-breakpoint($bp-large 12) {
+// 		@include grid-3up;
+// 	}
+// }
+
+.our-approach{
+	background: $gray-light-3;
+	padding: $pad $pad $pad-double $pad;
 }
 
 .clients{
-	@include grid-1up;
+	@include grid-3up;
+	padding: $pad $pad $pad-double $pad;
+	@extend .cf;
+	background-image: url(/assets/images/tile.png);
+	background-color: $gray-med;
 
 	@include at-breakpoint($bp-large 12) {
-		@include grid-4up;
+		@include pad(2,2);
+	}
+
+	.headline{
+		color:$white;
 	}
 }
 
+.main {
+	background: $gray-light-4;
+	padding: $pad-half $pad $pad-double;
+
+	.index &{
+		padding:0;
+	}
+}
 
 @include at-breakpoint($bp-large 12) {
 	.pagenav {
@@ -44,7 +67,7 @@
 	.main {
 		@include span-columns(9 omega, 12);
 		.content, .article-header, .article-meta {
-			@include span-columns(8, 9);
+			@include span-columns(9, 9);
 		}
 
 		.article-meta{
@@ -68,6 +91,10 @@
 			@include span-columns(7, 10);
 		}
 	}
+}
+
+.index .main .content{
+	@include span-columns(12 omgea, 12);
 }
 
 /*------------------------------------*\

@@ -18,11 +18,14 @@
 
 .headline {
 	line-height: 1.2;
+	text-align: center;
 }
 
 /* Hero Block */
 .block-hero {
-	margin-bottom: $space-half;
+	background: $blue;
+	padding:$pad;
+	color: $white;
 
 	.b-thumb {
 		img {
@@ -97,32 +100,28 @@
 	.b-thumb {
 		position: relative;
 		z-index: 0;
-
-		img {
-			display: block;
-		}
 	}
 }
 
-/* Hero Block */
-.block-hero {
-	margin-bottom: $space-half;
-	position: relative;
+// /* Hero Block */
+// .block-hero {
+// 	margin-bottom: $space-half;
+// 	position: relative;
 
-	.headline {
-		font-size: 1.1em;
-	}
+// 	.headline {
+// 		font-size: 1.1em;
+// 	}
 
-	.b-text {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		background: $dim;
-		color: $white;
-		padding: $pad-half;
-	}
-}
+// 	.b-text {
+// 		position: absolute;
+// 		bottom: 0;
+// 		left: 0;
+// 		width: 100%;
+// 		background: $dim;
+// 		color: $white;
+// 		padding: $pad-half;
+// 	}
+// }
 
 /* Block Thumb with Summary */
 .block-thumb-summary {

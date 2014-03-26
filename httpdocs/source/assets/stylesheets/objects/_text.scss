@@ -5,7 +5,6 @@
 
 //Intro text
 .intro {
-	font-family: $font-titling;
 	font-size: $font-size-slightly-larger;
 
 	@include at-breakpoint($bp-large 12) {
@@ -81,8 +80,6 @@
 }
 
 .vcard{
-	font-family: $font-titling;
-
 	margin:0;
 }
 

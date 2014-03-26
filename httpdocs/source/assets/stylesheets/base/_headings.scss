@@ -11,6 +11,8 @@ h2,
 h3 {
 	font-family: $font-titling;
 	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: $pad-quarter;
 }
 
 h1,
