@@ -1,8 +1,12 @@
-- name: Levis
-  logo: 
+- name: The Daily Street
+  logo: client-logos/daily-street.png
 - name: Shure
-  logo: 
+  logo: client-logos/shure.png
 - name: Hypoink
-  logo: 
+  logo: client-logos/hyponik.png
+- name: Levi's
+  logo: client-logos/levis.png
+- name: CDS Group
+  logo: client-logos/CDS.png
 - name: Lucky Fox
-  logo: 
+  logo: client-logos/lucky-fox.png
