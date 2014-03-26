@@ -6,7 +6,7 @@
 .wrapper{
 	@include container;
 	overflow: hidden;
-	padding: 200px;
+	padding: 0;
 	//@include susy-grid-background;
 }
 
