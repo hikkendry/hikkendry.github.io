@@ -1,0 +1,126 @@
+/*------------------------------------*\
+	$LAYOUT
+\*------------------------------------*/
+
+/* Layout Container */
+.wrapper{
+	@include container;
+	overflow: hidden;
+	padding: 200px;
+	//@include susy-grid-background;
+}
+
+.page{
+	@extend .wrapper;
+}
+
+/*------------------------------------*\
+    $TEMPLATES
+\*------------------------------------*/
+
+.case-studies{
+	@include grid-1up;
+
+	@include at-breakpoint($bp-large 12) {
+		@include grid-3up;
+	}
+}
+
+.clients{
+	@include grid-1up;
+
+	@include at-breakpoint($bp-large 12) {
+		@include grid-4up;
+	}
+}
+
+
+@include at-breakpoint($bp-large 12) {
+	.pagenav {
+		@include span-columns(3, 12);
+		padding-left: $pad-double;
+		position: fixed;
+	}
+	.main {
+		@include span-columns(9 omega, 12);
+		.content, .article-header, .article-meta {
+			@include span-columns(8, 9);
+		}
+
+		.article-meta{
+			margin: 0 ;
+		}
+	}
+}
+
+
+@include at-breakpoint($bp-xl 12) {
+	.main{
+		.article-meta{
+			@include span-columns(3 omega, 10);
+			padding: 0 $pad-double;
+		}
+		.article-header {
+			@include span-columns(10, 10);
+			@include suffix(3);
+		}
+		.content{
+			@include span-columns(7, 10);
+		}
+	}
+}
+
+/*------------------------------------*\
+	THIS TO FIX THE ARTICLE META
+
+	@include at-breakpoint($bp-xl 12) {
+	.main{
+		.article-meta{
+			@include container;
+			padding: 0;
+			position: fixed;
+			right: 0;
+			height: 0;
+
+			.intro{	
+				@include span-columns(3 omega, 12);
+				padding: 0 $pad-double;
+			}
+		}
+		.article-header {
+			@include span-columns(10, 10);
+			@include suffix(3);
+		}
+		.content{
+			@include span-columns(7, 10);
+		}
+	}
+}
+
+\*------------------------------------*/
+
+/*------------------------------------*\
+	$GRIDS
+\*------------------------------------*/
+
+
+/* Grid Item */
+// .grid-item {
+//  background: $gray-light-2;
+// }
+
+.grid-1up {
+	@include grid-1up;
+}
+
+.grid-2up {
+	@include grid-2up;
+}
+
+.grid-3up {
+	@include grid-3up;
+}
+
+.grid-4up {
+	@include grid-4up;
+}

@@ -1,0 +1,75 @@
+.header {
+	padding: 0;
+	border-bottom: 1px solid $gray-light-2;
+	text-align: center;
+
+	@include at-breakpoint($bp-large 12) {
+		border: none;
+		text-align: left;
+	}
+}
+
+.logo {
+	//@include scut-center-absolutely(15em n);
+	// @include scut-center-block(50%);
+	max-width: 10em;
+	padding-top: $pad;
+	
+
+	@include at-breakpoint($bp-large 12) {
+		position: static;
+		margin:0;
+		padding:$pad-double 0 $pad-half 0;
+		max-width: 9em;
+	}
+
+}
+
+.nav-toggle {
+	float: left;
+	display: block;
+	padding: 0.9rem 1rem 0.7rem;
+	font-size: 1.3rem;
+	line-height: 1;
+	border-right: 1px solid #dbdbdb;
+
+	@include at-breakpoint($bp-large 12) {
+		display: none;
+	}
+}
+
+.home-link {
+	@extend .nav-toggle;
+}
+
+.contact-toggle{
+	float: right;
+	display: block;
+	padding: 0.9rem 1rem 0.7rem;
+	font-size: 1.3rem;
+	line-height: 1;
+	border-left: 1px solid #dbdbdb;
+
+	@include at-breakpoint($bp-large 12) {
+		display: none;
+	}
+}
+
+.home-link, .contact-toggle{
+	color:$gray-dark;
+
+	&:hover{
+		color:$link-color-hover;
+	}
+}
+
+.search-form {
+	overflow: hidden;
+	max-height: 0;
+
+	@include at-breakpoint($bp-large 12) {
+		float: right;
+		max-height: none;
+		margin: 0.65em 0.5em 0 0;
+	}
+}

@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+@include scut-sticky-footer(2em page site-footer);
+
+.site-footer {
+	@extend .small;
+	height:4em;
+	padding:$pad;
+	border-top: 1px solid $gray-light;
+}
+
+//Footer Nav
+.nav-footer {
+	margin: (-$pad) (-$pad) $space;
+
+	li {
+		border-bottom: 1px solid $gray-dark;
+
+		@media all and (min-width: $bp-med) {
+			border: 0;
+			float: left;
+		}
+	}
+
+	a {
+		display: block;
+		padding: $pad;
+	}
+}
+
+.copyright {
+	color: $gray-light-4;
+	@media all and (min-width: $bp-med) {
+			float: right;
+		}
+}

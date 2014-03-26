@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/* Grids
+  Usage: @include grid-Xup;
+ */
+/* Grid 1up */
+@mixin grid-1up {
+  .grid-item{
+    @include span-columns(12, 12);
+  }
+}
+
+/* Grid 2up */
+@mixin grid-2up {
+	.grid-item{
+
+	@include grid-1up;
+
+ 		@include at-breakpoint($bp-small 12) {
+			@include span-columns(6, 12);
+    		@include remove-nth-omega(3n);
+    		@include nth-omega(2n);
+		}
+ 	}
+}
+
+/* Grid 3up */
+@mixin grid-3up {
+  .grid-item{
+
+	@include grid-1up;
+
+ 		@include at-breakpoint($bp-small 12) {
+    		@include span-columns(4, 12);
+    		@include remove-nth-omega(2n);
+    		@include nth-omega(3n);
+    	}
+	}
+}
+
+/* Grid 4up */
+@mixin grid-4up {
+.grid-item{
+
+	@include grid-1up;
+
+	@include at-breakpoint($bp-small 12) {
+		@include span-columns(6, 12);
+    	@include remove-nth-omega(3n);
+    	@include nth-omega(2n);
+	}
+
+	@include at-breakpoint($bp-large 12) {
+		@include span-columns(3, 12);
+		@include remove-nth-omega(2n);
+		@include nth-omega(4n);
+		}
+	}
+}
+
+/* CSS Transition
+	Usage: @include transition(width,0.3s,ease-out);
+ */
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+	Usage: @include font-size(1, large);
+*/
+@mixin font-size( $decimal-size, $keyword: null ) {
+  @if $keyword{ font-size: $keyword; }
+  @else { font-size: $decimal-size * $base-font-multiplier * 16px;}
+  font-size: $decimal-size * 1rem;
+}
+
+
+/* Rounded Corners */
+@mixin rounded{
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+}

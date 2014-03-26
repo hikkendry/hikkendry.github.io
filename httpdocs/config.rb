@@ -1,6 +1,11 @@
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+# Require any additional compass plugins here.
+require "susy"
+require "scut"
+	
+compass_config do |config|
+  config.output_style = :compact
+
+end
 
 # require 'slim'
 activate :livereload
