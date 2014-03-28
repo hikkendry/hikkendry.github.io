@@ -30,5 +30,5 @@ end
 
 # Dynamically create project pages
 data.projects.each do |project|
-	proxy "/#{project[:title].parameterize}.html", "/project.html", :locals => { :title => project[:title], :content => project }, :ignore => true
+	proxy "/#{project[:title].parameterize}.html", "/project.html", :locals => { :content => project }, :ignore => true
 end
