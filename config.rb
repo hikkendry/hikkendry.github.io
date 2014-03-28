@@ -3,6 +3,7 @@
 activate :livereload
 activate :directory_indexes
 
+set :build_dir, 'httpdocs'
 set :js_dir, 'assets/javascripts'
 set :css_dir, 'assets/stylesheets'
 set :images_dir, 'assets/images'
