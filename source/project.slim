@@ -1,0 +1,10 @@
+/ Content passed from config.rb
+header.artlicle-header
+  h1= content['title']
+.article-meta
+  p.intro= content['intro']
+.content
+  - puts content
+.nav-article-footer
+  a.icon-home href="/"
+    span.is-vishidden Home
