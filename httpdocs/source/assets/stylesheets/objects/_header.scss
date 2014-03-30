@@ -34,6 +34,7 @@
 	line-height: 1;
 	border-right: 1px solid #dbdbdb;
 
+
 	@include at-breakpoint($bp-large 12) {
 		display: none;
 	}
@@ -57,7 +58,7 @@
 }
 
 .home-link, .contact-toggle{
-	color:$gray-dark;
+	color: $gray-light-4;
 
 	&:hover{
 		color:$link-color-hover;

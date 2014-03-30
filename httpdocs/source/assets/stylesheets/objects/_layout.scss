@@ -28,14 +28,53 @@
 // 	}
 // }
 
+.case-studies{
+
+	.block{
+		padding:$pad;
+	}
+
+
+	@include at-breakpoint($bp-med 12) {
+		.b-thumb{
+			@include span-columns(7, 12);
+		}
+		.b-text{
+			@include span-columns(5 omega, 12);
+		}
+		.headline{
+			text-align: left;
+			color: $gray-med;
+		}
+
+		@for $i from 2 through 2 {
+		    .block:nth-of-type(3n+#{$i}) {
+		        background: $gray-light-3;
+
+	    		.b-thumb{
+					@include span-columns(7, 12, false, right);
+					margin-right: 0;
+				}
+				.b-text{
+					@include span-columns(5 omega, 12, false, right);
+					float: left;
+				}
+		    }
+		}
+	}
+}
+
 .our-approach{
 	background: $gray-light-3;
-	padding: $pad $pad $pad-double $pad;
+	@include pad(1, 1);
+	padding-top: $pad;
+	padding-bottom: $pad-double;
 	img{
 		width:100%;
 	}
 	//TEMP
 	p{
+		@extend h4;
 		padding: $pad 
 	}
 }

@@ -4,20 +4,20 @@ title: Index
 .content
   .block.block-hero
     h1 Hikkendry deliver clear, effective design solutions. We create user focussed websites and apps, develop beautiful branding and produce precise print design.
-  h3.headline Lime Fresh Projects
-  #carousel.owl-carousel.owl-theme
+  h3.headline Fresh Projects
+  .case-studies
     - data.projects.each do |project|
-      .item
-        .block.block-inset
-          a href= project["file"]
-            .b-thumb
-              == image_tag project["thumb"], alt: project["title"]
-            .b-text
-              h3.headline= project["title"]
+      .block.block-inset
+        a href= project["file"] 
+          .b-thumb
+            == image_tag project["thumb"], alt: project["title"]
+        .b-text
+          h3.headline= project["title"]
+          p= project["intro"]
+          a href= project["file"] class="project_link icon-arrow-right" VIEW THE PROJECT 
   .our-approach
     h3.headline Our atomic studio model
-    ==image_tag 'assets/images/atomic-4.gif'
-    p We have a small core team and a network of experts effective design solutions. We create user focussed websites and apps, develop beautiful branding and produce precise print design. We have a small core team and a network of experts effective design solutions. We create user focussed websites and apps, develop beautiful branding and produce precise print design.
+    p We have a small core team and a network of trusted experts that we can call on should a project demand it. This means that we stay small, nimble and efficient but can quickly target the talent to deliver projects of any size.
   .clients
     h3.headline Our clients include:
     - data.clients.each do |client|

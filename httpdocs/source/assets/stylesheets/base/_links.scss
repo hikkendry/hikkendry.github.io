@@ -8,3 +8,11 @@ a {
 		color: $link-color-hover;
 	}
 }
+
+.project_link{
+	text-align: center;
+	display: block;
+	@include at-breakpoint($bp-med 12) {
+		text-align: left;
+	}
+}

@@ -28,9 +28,4 @@
 		});
 	};
 
-	$("#carousel").owlCarousel({
-		navigation : true,
-		singleItem : true
-	});
-
 })(this, jQuery);

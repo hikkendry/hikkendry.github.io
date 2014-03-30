@@ -8,7 +8,7 @@ body {
 	font-family: $font;
 	-webkit-text-size-adjust: 100%;
 	@include adjust-leading-to(4);
-	color: $gray-dark;
+	color: $gray-med;
 	font-size: $font-size-slightly-smaller;
 	height: 100%;
 

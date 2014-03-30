@@ -4,11 +4,34 @@
 // @include scut-sticky-footer(2em page site-footer);
 
 .site-footer {
-	@extend .small;
-	height:4em;
+	background: $blue;
 	padding:$pad;
-	border-top: 1px solid $gray-light;
+	text-align: center;
+	color: $gray-light-4;
+	@extend .cf;
+
+	h4 a {
+		color: $white;
+	}
+
+	.copyright {
+		@extend .small;
+		color: $gray-light-4;
+	}
+
+	@include at-breakpoint($bp-med 12) {
+		h4 {
+			@include span-columns(6, 12);
+			text-align: left;
+		}
+		.copyright{
+			@include span-columns(6 omega, 12);
+			text-align: right;
+		}
+	}
 }
+
+
 
 //Footer Nav
 .nav-footer {
@@ -27,11 +50,4 @@
 		display: block;
 		padding: $pad;
 	}
-}
-
-.copyright {
-	color: $gray-light-4;
-	@media all and (min-width: $bp-med) {
-			float: right;
-		}
 }
