@@ -31,6 +31,13 @@
 .our-approach{
 	background: $gray-light-3;
 	padding: $pad $pad $pad-double $pad;
+	img{
+		width:100%;
+	}
+	//TEMP
+	p{
+		padding: $pad 
+	}
 }
 
 .clients{
