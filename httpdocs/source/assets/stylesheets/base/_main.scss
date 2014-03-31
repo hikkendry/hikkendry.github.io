@@ -1,0 +1,26 @@
+html{
+	height: 100%;
+}
+
+body {
+	background-color: $white;
+	line-height: 1.5; 
+	font-family: $font;
+	-webkit-text-size-adjust: 100%;
+	@include adjust-leading-to(4);
+	color: $gray-med;
+	font-size: $font-size-slightly-smaller;
+	height: 100%;
+
+	@include at-breakpoint($bp-med 12) {
+		font-size: $font-size-norm;
+	}
+
+	// @include at-breakpoint($bp-large 12) {
+	// 	font-size: $font-size-norm;
+	// }
+
+	@include at-breakpoint($bp-xl 12) {
+		font-size: $font-size-slightly-larger;
+	}
+}

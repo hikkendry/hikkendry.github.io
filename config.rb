@@ -1,3 +1,7 @@
+# Require any additional compass plugins here.
+require "susy"
+require "scut"
+
 # require 'slim'
 
 activate :livereload

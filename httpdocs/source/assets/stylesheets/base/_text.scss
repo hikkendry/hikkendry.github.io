@@ -1,0 +1,27 @@
+/* Text-Related Elements */ 
+p {
+	margin-bottom: $space;
+}
+
+/* Blockquote */
+blockquote {
+    font-family: $font-secondary;
+    @extend .gamma;
+    color: $gray;
+	padding-left: $pad-double;
+    border-left: 1px solid $gray;
+	margin-bottom: $space;
+}
+
+/* Horizontal Rule */ 
+hr {
+	border: 0;
+    height: 2px;
+    background: $gray-dark;
+    margin: $space-double 0;
+}
+
+abbr {
+    border-bottom: 1px dotted $gray-dark;
+    cursor: help;
+}

@@ -1,0 +1,199 @@
+/*------------------------------------*\
+	$LAYOUT
+\*------------------------------------*/
+
+/* Layout Container */
+.wrapper{
+	@include container;
+	overflow: hidden;
+	padding: 0;
+	//@include susy-grid-background;
+}
+
+.page{
+	@extend .wrapper;
+	background: $gray-dark-2;
+}
+
+/*------------------------------------*\
+    $TEMPLATES
+\*------------------------------------*/
+
+// .case-studies{
+// 	@include grid-1up;
+// 	@extend .cf;
+
+// 	@include at-breakpoint($bp-large 12) {
+// 		@include grid-3up;
+// 	}
+// }
+
+.case-studies{
+
+	.block{
+		padding:$pad;
+	}
+
+
+	@include at-breakpoint($bp-med 12) {
+		.b-thumb{
+			@include span-columns(7, 12);
+		}
+		.b-text{
+			@include span-columns(5 omega, 12);
+		}
+		.headline{
+			text-align: left;
+			color: $gray-med;
+		}
+
+		@for $i from 2 through 2 {
+		    .block:nth-of-type(3n+#{$i}) {
+		        background: $gray-light-3;
+
+	    		.b-thumb{
+					@include span-columns(7, 12, false, right);
+					margin-right: 0;
+				}
+				.b-text{
+					@include span-columns(5 omega, 12, false, right);
+					float: left;
+				}
+		    }
+		}
+	}
+}
+
+.our-approach{
+	background: $gray-light-3;
+	@include pad(1, 1);
+	padding-top: $pad;
+	padding-bottom: $pad-double;
+	img{
+		width:100%;
+	}
+	//TEMP
+	p{
+		@extend h4;
+		padding: $pad 
+	}
+}
+
+.clients{
+	@include grid-3up;
+	padding: $pad $pad $pad-double $pad;
+	@extend .cf;
+	background-image: url(/assets/images/tile.png);
+	background-color: $gray-med;
+
+	@include at-breakpoint($bp-large 12) {
+		@include pad(2,2);
+	}
+
+	.headline{
+		color:$white;
+	}
+}
+
+.main {
+	background: $gray-light-4;
+	padding: $pad-half $pad $pad-double;
+
+	.index &{
+		padding:0;
+	}
+}
+
+@include at-breakpoint($bp-large 12) {
+	.pagenav {
+		@include span-columns(3, 12);
+		padding-left: $pad-double;
+		position: fixed;
+	}
+	.main {
+		@include span-columns(9 omega, 12);
+		.content, .article-header, .article-meta {
+			@include span-columns(9, 9);
+		}
+
+		.article-meta{
+			margin: 0 ;
+		}
+	}
+}
+
+
+@include at-breakpoint($bp-xl 12) {
+	.main{
+		.article-meta{
+			@include span-columns(3 omega, 10);
+			padding: 0 $pad-double;
+		}
+		.article-header {
+			@include span-columns(10, 10);
+			@include suffix(3);
+		}
+		.content{
+			@include span-columns(7, 10);
+		}
+	}
+}
+
+.index .main .content{
+	@include span-columns(12 omgea, 12);
+}
+
+/*------------------------------------*\
+	THIS TO FIX THE ARTICLE META
+
+	@include at-breakpoint($bp-xl 12) {
+	.main{
+		.article-meta{
+			@include container;
+			padding: 0;
+			position: fixed;
+			right: 0;
+			height: 0;
+
+			.intro{	
+				@include span-columns(3 omega, 12);
+				padding: 0 $pad-double;
+			}
+		}
+		.article-header {
+			@include span-columns(10, 10);
+			@include suffix(3);
+		}
+		.content{
+			@include span-columns(7, 10);
+		}
+	}
+}
+
+\*------------------------------------*/
+
+/*------------------------------------*\
+	$GRIDS
+\*------------------------------------*/
+
+
+/* Grid Item */
+// .grid-item {
+//  background: $gray-light-2;
+// }
+
+.grid-1up {
+	@include grid-1up;
+}
+
+.grid-2up {
+	@include grid-2up;
+}
+
+.grid-3up {
+	@include grid-3up;
+}
+
+.grid-4up {
+	@include grid-4up;
+}
