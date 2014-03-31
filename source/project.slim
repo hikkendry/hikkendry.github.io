@@ -1,0 +1,17 @@
+/ Content passed from config.rb
+header.artlicle-header
+  h1= content['title']
+
+.article-meta
+  p.intro= content['intro']
+
+.content
+  - content['content'].each do |tag, value|
+    - if tag.include? 'p'
+      p= value
+    - if tag.include? 'img'
+      == image_tag value
+
+  .nav-article-footer
+    a.icon-home href="/"
+      span.is-vishidden Home

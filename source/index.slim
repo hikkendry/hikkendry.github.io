@@ -12,7 +12,7 @@ title: Index
     - data.projects.each do |project|
       .grid-item
         .block.block-inset
-          a href= project["file"]
+          a href= project["title"].parameterize
             .b-thumb
               == image_tag project["thumb"]
             .b-text

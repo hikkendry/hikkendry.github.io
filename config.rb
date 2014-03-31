@@ -1,11 +1,9 @@
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
 # require 'slim'
+
 activate :livereload
 activate :directory_indexes
 
+set :build_dir, 'httpdocs'
 set :js_dir, 'assets/javascripts'
 set :css_dir, 'assets/stylesheets'
 set :images_dir, 'assets/images'
@@ -21,7 +19,16 @@ configure :build do
   # activate :minify_javascript
   activate :asset_hash
 
+	# compass_config do |config|
+	#   config.output_style = :compact
+	# end
+
   # activate :relative_assets
   # set :relative_links, true
 
+end
+
+# Dynamically create project pages
+data.projects.each do |project|
+	proxy "/#{project[:title].parameterize}.html", "/project.html", :locals => { :content => project }, :ignore => true
 end
