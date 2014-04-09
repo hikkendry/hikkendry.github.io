@@ -6,7 +6,7 @@
 	clear: both;
 	overflow: hidden;
 	max-height: 0;
-	
+
 	a {
 		display: block;
 		padding: $pad;
@@ -29,14 +29,18 @@
 			padding: $pad-half 0;
 			border: 0;
 		}
-		
+
 	}
 }
 
-.contact{
+.contact {
 	@extend .nav;
 	text-align: center;
 	border-top: 1px solid $gray-light-2;
+  -webkit-transition: max-height 1s ease-in-out;
+     -moz-transition: max-height 1s ease-in-out;
+       -o-transition: max-height 1s ease-in-out;
+          transition: max-height 1s ease-in-out;
 
 	.adr{
 		display: block;
