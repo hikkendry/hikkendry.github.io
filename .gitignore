@@ -11,6 +11,7 @@
 /httpdocs
 
 # Ignore caches
+/.cache
 /.*cache
 
 # Ignore .DS_store file
