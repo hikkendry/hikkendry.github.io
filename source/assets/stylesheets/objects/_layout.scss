@@ -75,7 +75,7 @@
 	//TEMP
 	p{
 		@extend h4;
-		padding: $pad 
+		padding: $pad
 	}
 }
 
@@ -102,6 +102,23 @@
 	.index &{
 		padding:0;
 	}
+}
+
+.content {
+  text-align: center;
+
+  p {
+    text-align: left;
+  }
+
+  img {
+    margin: $pad;
+
+    &:nth-of-type(2n):after {
+      background-color: $gray-light-3;
+      width: 100%;
+    }
+  }
 }
 
 @include at-breakpoint($bp-large 12) {
@@ -155,7 +172,7 @@
 			right: 0;
 			height: 0;
 
-			.intro{	
+			.intro{
 				@include span-columns(3 omega, 12);
 				padding: 0 $pad-double;
 			}
