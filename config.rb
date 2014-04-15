@@ -24,7 +24,7 @@ end
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :git
-  deploy.remote = "github"
+  deploy.remote = "origin"
   deploy.branch = "master"
 end
 
