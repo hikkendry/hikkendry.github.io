@@ -6,6 +6,8 @@ Welcome behind the scenes of Hikkendry's portfolio site.
 
 * Ruby >= 2.0.0
 * Bundler (`gem install bundler`)
+* [XQuartz](https://xquartz.macosforge.org/)
+* ImageOptim deps (`brew install advancecomp jhead jpegoptim jpeg optipng pngcrush gifsicle`)
 
 ## Contributing
 
