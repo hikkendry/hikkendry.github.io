@@ -25,9 +25,16 @@
  * TOC To Be Continued
  */
 
+/*------------------------------------*\
+    $THIRD PARTY
+\*------------------------------------*/
 @import "compass";
 @import "susy";
 @import "scut";
+
+/*------------------------------------*\
+    $GENERIC ELEMENTS
+\*------------------------------------*/
 @import "generic/fonts";
 @import "generic/mixins";
 @import "generic/variables";

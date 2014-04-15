@@ -81,9 +81,7 @@
 
 .clients{
 	@include grid-3up;
-	padding: $pad $pad $pad-double $pad;
 	@extend .cf;
-	background-image: url(/assets/images/tile.png);
 	background-color: $gray-med;
 
 	@include at-breakpoint($bp-large 12) {
@@ -107,7 +105,8 @@
 .content {
   text-align: center;
 
-  p {
+  p,
+  .block-hero {
     text-align: left;
   }
 
