@@ -111,7 +111,7 @@
   }
 
   img {
-    margin: $pad;
+    margin: $pad 0;
 
     &:nth-of-type(2n):after {
       background-color: $gray-light-3;
