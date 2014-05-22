@@ -37,8 +37,9 @@
 		}
 	}
 
-	@media all and (min-width: $bp-large) {
+	@include at-breakpoint($bp-large 12) {
 		position: relative;
+		@include pad(1,1);
 
 		.b-text {
 			position: absolute;

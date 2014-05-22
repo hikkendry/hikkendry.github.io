@@ -32,6 +32,10 @@
 
 	.block{
 		padding:$pad;
+
+		@include at-breakpoint($bp-large 12) {
+			@include pad(1,1);
+		}
 	}
 
 
@@ -121,16 +125,9 @@
 }
 
 @include at-breakpoint($bp-large 12) {
-	.pagenav {
-		@include span-columns(3, 12);
-		padding-left: $pad-double;
-		position: fixed;
-	}
+
 	.main {
-		@include span-columns(9 omega, 12);
-		.content, .article-header, .article-meta {
-			@include span-columns(9, 9);
-		}
+		@include pad(1,1);
 
 		.article-meta{
 			margin: 0 ;
@@ -139,8 +136,9 @@
 }
 
 
-@include at-breakpoint($bp-xl 12) {
-	.main{
+ @include at-breakpoint($bp-xl 12) {
+ 	.main{
+
 		.article-meta{
 			@include span-columns(3 omega, 10);
 			padding: 0 $pad-double;
@@ -151,6 +149,7 @@
 		}
 		.content{
 			@include span-columns(7, 10);
+			
 		}
 	}
 }

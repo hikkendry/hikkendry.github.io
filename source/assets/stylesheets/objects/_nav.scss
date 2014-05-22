@@ -6,37 +6,40 @@
 	clear: both;
 	overflow: hidden;
 	max-height: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
 
 	a {
 		display: block;
 		padding: $pad;
-		border-top: 1px solid $gray-light-2;
+		border-top: 1px solid $gray-med;
 	}
 
 	&.active {
 		max-height: 40em;
 	}
 
-	@include at-breakpoint($bp-large 12) {
-		max-height: none;
-		padding-bottom: $pad;
+	 @include at-breakpoint($bp-large 12) {
+	// 	max-height: none;
+	// 	padding-bottom: $pad;
 
-		li {
-			//float: left;
-		}
+	// 	li {
+	// 		//float: left;
+	// 	}
 
 		a {
 			padding: $pad-half 0;
 			border: 0;
 		}
 
-	}
+	 }
 }
 
 .contact {
 	@extend .nav;
 	text-align: center;
-	border-top: 1px solid $gray-light-2;
+	border-top: 1px solid $gray-med;
   -webkit-transition: max-height 1s ease-in-out;
      -moz-transition: max-height 1s ease-in-out;
        -o-transition: max-height 1s ease-in-out;
@@ -54,6 +57,7 @@
 
 	@include at-breakpoint($bp-large 12) {
 		text-align: left;
+		padding-left: $pad-double;
 	}
 }
 

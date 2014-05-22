@@ -1,12 +1,14 @@
 .header {
 	padding: 0;
-	border-bottom: 1px solid $gray-light-2;
 	text-align: center;
 	color: $white;
 
 	@include at-breakpoint($bp-large 12) {
 		border: none;
 		text-align: left;
+		background-image: url(/assets/images/strip.jpg);
+		background-repeat: repeat-x;
+		padding-top: 9px;
 	}
 }
 
@@ -17,13 +19,14 @@
 	padding-top: $pad;
 	
 
-	@include at-breakpoint($bp-large 12) {
-		position: static;
-		margin:0;
-		padding:$pad-double 0 $pad-half 0;
-		max-width: 9em;
-	}
-
+@include at-breakpoint($bp-large 12) {
+// 		//padding:$pad-double;
+ 		max-width: 15rem;
+// 	// 	position: static;
+// 	// 	margin:0;
+		padding:$pad-double;
+// 	// 	max-width: 9em;
+ 	}
 }
 
 .nav-toggle {
@@ -32,7 +35,7 @@
 	padding: 0.9rem 1rem 0.7rem;
 	font-size: 1.3rem;
 	line-height: 1;
-	border-right: 1px solid #dbdbdb;
+	border-right: 1px solid $gray-med;
 
 
 	@include at-breakpoint($bp-large 12) {
@@ -50,10 +53,11 @@
 	padding: 0.9rem 1rem 0.7rem;
 	font-size: 1.3rem;
 	line-height: 1;
-	border-left: 1px solid #dbdbdb;
+	border-left: 1px solid $gray-med;
 
 	@include at-breakpoint($bp-large 12) {
-		display: none;
+		font-size: 2rem;
+		padding: 1.9rem;
 	}
 }
 
