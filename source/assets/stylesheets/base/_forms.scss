@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 form > div {
-	margin-bottom: $space;
+	@include span(full nest);
 }
 
 form ol, form ul {
@@ -33,6 +33,7 @@ input, textarea {
 	border: 1px solid $gray;
 	padding: $pad-half 0.65rem;
 	@include rounded;
+	height: auto;
 }
 
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
@@ -137,3 +138,4 @@ input[type="search"]::-webkit-search-decoration {
 	border-left: 1px solid $gray;
 	color: $gray;
 }
+

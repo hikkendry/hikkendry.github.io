@@ -12,7 +12,7 @@ a {
 .project_link{
 	text-align: center;
 	display: block;
-	@include at-breakpoint($bp-med 12) {
+	@include breakpoint($bp-med) {
 		text-align: left;
 	}
 }

@@ -1,0 +1,29 @@
+---
+title: About us
+---
+
+.block
+  .block-hero
+    ==image_tag ("potato.png")
+
+header.article-header
+  h1 About us
+
+.article-content
+  p We are a multi disciplined design studio based in Shoreditch, East London, with over 30 years combined experience delivering to clients within both the public and private sector.
+  p The account team will comprise of 3 core members (Angus, Chris and Rory) supported by our great creative team of graphic, illustration, motion, photography and digital proffesionals.
+
+.article-meta
+  .clients
+    h3.headline Our clients include:
+    - data.clients.each do |client|
+      .grid-item
+        .block.block-inset
+          .b-thumb
+            == image_tag client["logo"], alt: client["name"]
+
+.nav-article-footer
+  a.icon-home href="/"
+    span.is-vishidden Home
+
+  h4.subheading == link_to 'Get in touch to discuss your project', '/contact'

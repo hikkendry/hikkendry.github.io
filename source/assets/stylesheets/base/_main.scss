@@ -4,7 +4,7 @@ html{
 
 body {
 	background-color: $white;
-	line-height: 1.5; 
+	line-height: 1.75; 
 	font-family: $font;
 	-webkit-text-size-adjust: 100%;
 	@include adjust-leading-to(4);
@@ -12,15 +12,15 @@ body {
 	font-size: $font-size-slightly-smaller;
 	height: 100%;
 
-	@include at-breakpoint($bp-med 12) {
+	@include breakpoint($bp-med) {
 		font-size: $font-size-norm;
 	}
 
-	// @include at-breakpoint($bp-large 12) {
+	// @include breakpoint($bp-large 12) {
 	// 	font-size: $font-size-norm;
 	// }
 
-	@include at-breakpoint($bp-xl 12) {
+	@include breakpoint($bp-xl) {
 		font-size: $font-size-slightly-larger;
 	}
 }

@@ -1,81 +1,97 @@
-.header {
-	padding: 0;
-	text-align: center;
-	color: $white;
+.logo{
+	@include span(6 of 12 nest);
 
-	@include at-breakpoint($bp-large 12) {
-		border: none;
-		text-align: left;
-		background-image: url(/assets/images/strip.jpg);
-		background-repeat: repeat-x;
-		padding-top: 9px;
+	@include breakpoint($bp-small-2) {
+		@include span(4 of 12 nest);
+	}
+
+	@include breakpoint($bp-large) {
+		@include span(3 of 12 nest);
+	}
+
+	@include breakpoint($bp-xl) {
+		@include span(2 of 12 nest);
 	}
 }
 
-.logo {
-	//@include scut-center-absolutely(15em n);
-	// @include scut-center-block(50%);
-	max-width: 10em;
-	padding-top: $pad;
+// .header {
+// 	padding: 0;
+// 	text-align: center;
+// 	color: $white;
+
+// 	@include breakpoint($bp-large) {
+// 		border: none;
+// 		text-align: left;
+// 		background-image: url(/assets/images/strip.jpg);
+// 		background-repeat: repeat-x;
+// 		padding-top: 9px;
+// 	}
+// }
+
+// .logo {
+// 	//@include scut-center-absolutely(15em n);
+// 	// @include scut-center-block(50%);
+// 	max-width: 10em;
+// 	padding-top: $pad;
 	
 
-@include at-breakpoint($bp-large 12) {
-// 		//padding:$pad-double;
- 		max-width: 15rem;
-// 	// 	position: static;
-// 	// 	margin:0;
-		padding:$pad-double;
-// 	// 	max-width: 9em;
- 	}
-}
+// @include breakpoint($bp-large) {
+// // 		//padding:$pad-double;
+//  		max-width: 15rem;
+// // 	// 	position: static;
+// // 	// 	margin:0;
+// 		padding:$pad-double;
+// // 	// 	max-width: 9em;
+//  	}
+// }
 
-.nav-toggle {
-	float: left;
-	display: block;
-	padding: 0.9rem 1rem 0.7rem;
-	font-size: 1.3rem;
-	line-height: 1;
-	border-right: 1px solid $gray-med;
+// .nav-toggle {
+// 	float: left;
+// 	display: block;
+// 	padding: 0.9rem 1rem 0.7rem;
+// 	font-size: 1.3rem;
+// 	line-height: 1;
+// 	border-right: 1px solid $gray-med;
 
 
-	@include at-breakpoint($bp-large 12) {
-		display: none;
-	}
-}
+// 	@include breakpoint($bp-large) {
+// 		display: none;
+// 	}
+// }
 
-.home-link {
-	@extend .nav-toggle;
-}
+// .home-link {
+// 	@extend .nav-toggle;
+// }
 
-.contact-toggle{
-	float: right;
-	display: block;
-	padding: 0.9rem 1rem 0.7rem;
-	font-size: 1.3rem;
-	line-height: 1;
-	border-left: 1px solid $gray-med;
+// .contact-toggle{
+// 	float: right;
+// 	display: block;
+// 	padding: 0.9rem 1rem 0.7rem;
+// 	font-size: 1.3rem;
+// 	line-height: 1;
+// 	border-left: 1px solid $gray-med;
 
-	@include at-breakpoint($bp-large 12) {
-		font-size: 2rem;
-		padding: 1.9rem;
-	}
-}
+// 	@include breakpoint($bp-large) {
+// 		font-size: 2rem;
+// 		padding: 1.9rem;
+// 	}
+// }
 
-.home-link, .contact-toggle{
-	color: $gray-light-4;
+// .home-link, .contact-toggle{
+// 	color: $gray-light-4;
 
-	&:hover{
-		color:$link-color-hover;
-	}
-}
+// 	&:hover{
+// 		color:$link-color-hover;
+// 	}
+// }
 
-.search-form {
-	overflow: hidden;
-	max-height: 0;
+// .search-form {
+// 	overflow: hidden;
+// 	max-height: 0;
 
-	@include at-breakpoint($bp-large 12) {
-		float: right;
-		max-height: none;
-		margin: 0.65em 0.5em 0 0;
-	}
-}
+// 	@include breakpoint($bp-large) {
+// 		float: right;
+// 		max-height: none;
+// 		margin: 0.65em 0.5em 0 0;
+// 	}
+// }

@@ -2,18 +2,218 @@
 	$LAYOUT
 \*------------------------------------*/
 
-/* Layout Container */
-.wrapper{
-	@include container;
-	overflow: hidden;
-	padding: 0;
-	//@include susy-grid-background;
+.page{
+	@include container(90%);
+
+	@include breakpoint($bp-large) {
+		@include container(85%);
+	}
+
+	@include breakpoint($bp-xl) {
+		@include container(80%);
+	}
 }
 
-.page{
-	@extend .wrapper;
-	background: $gray-dark-2;
+.main, .pagenav{
+	@include span(full nest);
 }
+
+.pagenav{
+	margin-top: rhythm(3);
+	margin-bottom: rhythm(3);
+
+	@include breakpoint($bp-med) {
+		margin-top: rhythm(6);
+		margin-bottom: rhythm(6);
+	}
+}
+
+.index h1 {
+	@include adjust-font-size-to($h3-fz);
+	margin: rhythm(2, $h3-fz) 0 rhythm(4, $h3-fz) 0; // 1 line above 2 line below
+	text-align: center;
+
+	@include breakpoint($bp-small) {
+		@include adjust-font-size-to($h2-fz);
+		margin: rhythm(4, $h2-fz) 0 rhythm(8, $h2-fz) 0; // 1 line above 2 line below
+	}
+
+	@include breakpoint($bp-med-2) {
+		@include adjust-font-size-to($h1-fz);
+		margin: rhythm(4, $h1-fz) 0 rhythm(8, $h1-fz) 0; // 1 line above 2 line below
+	}
+}
+
+.article-meta{
+
+	@include span(full);
+
+	@include breakpoint($bp-med-2) {
+		@include span(4 of 12 rtl);
+		@include pre(1);
+	}
+
+	.intro{
+		@extend .titling;
+	}
+}
+
+.article-header{
+	@include span(full);
+}
+
+.article-content{
+	@include span(full);
+
+	@include breakpoint($bp-med-2) {
+		@include span(7 of 12 rtl);
+	}
+}
+
+.site-footer{
+	text-align: center;
+	@include span(full);
+}
+
+.about-us{
+
+	.article-content{
+		@include breakpoint($bp-med) {
+			@include span(7 of 12);
+		}
+	}
+
+	.clients{
+		h3{
+			margin-top: 0;
+			@extend h5;
+		}
+
+		.grid-item{
+			@include span(6 of 12 nest);
+
+			@include breakpoint($bp-small-2) {
+				@include span(4 of 12 nest);
+			}
+
+			@include breakpoint($bp-med-2) {
+				@include span(50% of 5 nest);
+			}
+
+			@include breakpoint($bp-xxl) {
+				@include span(33.33% of 5 nest);
+			}
+		}
+	}
+}
+
+.contact, .confirm{
+
+	form{
+		background: $blue;
+		padding: $pad;
+		@include clearfix;
+
+		label{
+			color: $white;
+			text-align: left;
+			@extend h4;
+			margin: 0;
+		}
+
+		.ss-q-title, input[type=text]{
+			display: inline-block;
+		    vertical-align: baseline;
+		    padding-top: $pad-half;
+		    margin: $pad-half 0;
+		}
+
+		.ss-q-title{
+			@include breakpoint($bp-large) {
+				@include span(4 of 12 break);
+
+				&.long-title{
+					@include span(full break);
+				}
+			}
+		}
+
+		input[type=text]{
+			@include breakpoint($bp-large) {
+				@include span(8 of 12);
+			}
+		}
+
+		input, textarea{
+			border: 0;
+		}
+
+		input[type=submit]{
+			color: $white;
+			background: $plum;
+			@include span(full);
+			margin-top: $pad-half;
+
+			@include breakpoint($bp-large) {
+				@include span(3 of 12 rtl);
+			}
+		}
+
+		// label, input {
+		//     display: inline-block;
+		//     vertical-align: baseline;
+		//     padding-top: $pad-half;
+		//     margin: $pad-half 0;
+		// }
+
+		// input{
+		// 	border: 0;
+
+		// 	@include breakpoint($bp-med) {
+		// 		@include span(7 of 12);
+		// 	}
+		// }
+
+		// input[type=submit]{
+		// 	@include span(3 of 12 rtl);
+		// 	color: $white;
+		// 	background: $plum;
+
+		// }
+
+		// textarea {
+		// 	height: auto;
+		// 	border: 0;
+		// 	//height: rhythm(15);
+		// }
+
+		// label{
+		// 	color: $white;
+		// 	text-align: left;
+		// 	@extend h4;
+		// 	margin: $pad-half 0;
+
+		// 	@include breakpoint($bp-med) {
+		// 		@include span(5 of 12 break);
+		// 	}
+		// }
+	}
+
+	.article-content{
+		@include breakpoint($bp-med) {
+			@include span(7 of 12 break);
+		}
+	}
+
+	h2.org{
+		margin-top: 0;
+	}
+}
+
+// .page{
+// 	@extend .wrapper;
+// 	background: $gray-dark-2;
+// }
 
 /*------------------------------------*\
     $TEMPLATES
@@ -23,192 +223,192 @@
 // 	@include grid-1up;
 // 	@extend .cf;
 
-// 	@include at-breakpoint($bp-large 12) {
+// 	@include breakpoint($bp-large 12) {
 // 		@include grid-3up;
 // 	}
 // }
 
-.case-studies{
+// .case-studies{
 
-	.block{
-		padding:$pad;
+// 	.block{
+// 		padding:$pad;
 
-		@include at-breakpoint($bp-large 12) {
-			@include pad(1,1);
-		}
-	}
-
-
-	@include at-breakpoint($bp-med 12) {
-		.b-thumb{
-			@include span-columns(7, 12);
-		}
-		.b-text{
-			@include span-columns(5 omega, 12);
-		}
-		.headline{
-			text-align: left;
-			color: $gray-med;
-		}
-
-		@for $i from 2 through 2 {
-		    .block:nth-of-type(3n+#{$i}) {
-		        background: $gray-light-3;
-
-	    		.b-thumb{
-					@include span-columns(7, 12, false, right);
-					margin-right: 0;
-				}
-				.b-text{
-					@include span-columns(5 omega, 12, false, right);
-					float: left;
-				}
-		    }
-		}
-	}
-}
-
-.our-approach{
-	background: $gray-light-3;
-	@include pad(1, 1);
-	padding-top: $pad;
-	padding-bottom: $pad-double;
-	img{
-		width:100%;
-	}
-	//TEMP
-	p{
-		@extend h4;
-		padding: $pad
-	}
-}
-
-.clients{
-	@include grid-3up;
-	@extend .cf;
-	background-color: $gray-med;
-
-	@include at-breakpoint($bp-large 12) {
-		@include pad(2,2);
-	}
-
-	.headline{
-		color:$white;
-	}
-}
-
-.main {
-	background: $gray-light-4;
-	padding: $pad-half $pad $pad-double;
-
-	.index &{
-		padding:0;
-	}
-}
-
-.content {
-  text-align: center;
-
-  p,
-  .block-hero {
-    text-align: left;
-  }
-
-  img {
-    margin: $pad 0;
-
-    &:nth-of-type(2n):after {
-      background-color: $gray-light-3;
-      width: 100%;
-    }
-  }
-}
-
-@include at-breakpoint($bp-large 12) {
-
-	.main {
-		@include pad(1,1);
-
-		.article-meta{
-			margin: 0 ;
-		}
-	}
-}
+// 		@include breakpoint($bp-large) {
+// 			@include pad(1);
+// 		}
+// 	}
 
 
- @include at-breakpoint($bp-xl 12) {
- 	.main{
+// 	@include breakpoint($bp-med) {
+// 		.b-thumb{
+// 			@include span(7 of 12);
+// 		}
+// 		.b-text{
+// 			@include span(5 last of 12);
+// 		}
+// 		.headline{
+// 			text-align: left;
+// 			color: $gray-med;
+// 		}
 
-		.article-meta{
-			@include span-columns(3 omega, 10);
-			padding: 0 $pad-double;
-		}
-		.article-header {
-			@include span-columns(10, 10);
-			@include suffix(3);
-		}
-		.content{
-			@include span-columns(7, 10);
-			
-		}
-	}
-}
+// 		@for $i from 2 through 2 {
+// 		    .block:nth-of-type(3n+#{$i}) {
+// 		        background: $gray-light-3;
 
-.index .main .content{
-	@include span-columns(12 omgea, 12);
-}
-
-/*------------------------------------*\
-	THIS TO FIX THE ARTICLE META
-
-	@include at-breakpoint($bp-xl 12) {
-	.main{
-		.article-meta{
-			@include container;
-			padding: 0;
-			position: fixed;
-			right: 0;
-			height: 0;
-
-			.intro{
-				@include span-columns(3 omega, 12);
-				padding: 0 $pad-double;
-			}
-		}
-		.article-header {
-			@include span-columns(10, 10);
-			@include suffix(3);
-		}
-		.content{
-			@include span-columns(7, 10);
-		}
-	}
-}
-
-\*------------------------------------*/
-
-/*------------------------------------*\
-	$GRIDS
-\*------------------------------------*/
-
-
-/* Grid Item */
-// .grid-item {
-//  background: $gray-light-2;
+// 	    		.b-thumb{
+// 					@include span(7 of 12);
+// 					margin-right: 0;
+// 				}
+// 				.b-text{
+// 					@include span(5 last of 12);
+// 					float: left;
+// 				}
+// 		    }
+// 		}
+// 	}
 // }
 
-.grid-1up {
-	@include grid-1up;
-}
+// .our-approach{
+// 	background: $gray-light-3;
+// 	@include pad(1, 1);
+// 	padding-top: $pad;
+// 	padding-bottom: $pad-double;
+// 	img{
+// 		width:100%;
+// 	}
+// 	//TEMP
+// 	p{
+// 		@extend h4;
+// 		padding: $pad
+// 	}
+// }
 
-.grid-2up {
-	@include grid-2up;
-}
+// .clients{
+// 	@include grid-3up;
+// 	@extend .cf;
+// 	background-color: $gray-med;
 
-.grid-3up {
-	@include grid-3up;
-}
+// 	@include breakpoint($bp-large) {
+// 		@include pad(2,2);
+// 	}
 
-.grid-4up {
-	@include grid-4up;
-}
+// 	.headline{
+// 		color:$white;
+// 	}
+// }
+
+// .main {
+// 	background: $gray-light-4;
+// 	padding: $pad-half $pad $pad-double;
+
+// 	.index &{
+// 		padding:0;
+// 	}
+// }
+
+// .content {
+//   text-align: center;
+
+//   p,
+//   .block-hero {
+//     text-align: left;
+//   }
+
+//   img {
+//     margin: $pad 0;
+
+//     &:nth-of-type(2n):after {
+//       background-color: $gray-light-3;
+//       width: 100%;
+//     }
+//   }
+// }
+
+// @include breakpoint($bp-large) {
+
+// 	.main {
+// 		@include pad(1,1);
+
+// 		.article-meta{
+// 			margin: 0 ;
+// 		}
+// 	}
+// }
+
+
+//  @include breakpoint($bp-xl) {
+//  	.main{
+
+// 		.article-meta{
+// 			@include span(3 of 10 last);
+// 			padding: 0 $pad-double;
+// 		}
+// 		.article-header {
+// 			@include span(10 of 10);
+// 			@include suffix(3);
+// 		}
+// 		.content{
+// 			@include span(7 of 10);
+			
+// 		}
+// 	}
+// }
+
+// .index .main .content{
+// 	@include span(12 of 12);
+// }
+
+// /*------------------------------------*\
+// 	THIS TO FIX THE ARTICLE META
+
+// 	@include breakpoint($bp-xl 12) {
+// 	.main{
+// 		.article-meta{
+// 			@include container;
+// 			padding: 0;
+// 			position: fixed;
+// 			right: 0;
+// 			height: 0;
+
+// 			.intro{
+// 				@include span(3 last, 12);
+// 				padding: 0 $pad-double;
+// 			}
+// 		}
+// 		.article-header {
+// 			@include span(10, 10);
+// 			@include suffix(3);
+// 		}
+// 		.content{
+// 			@include span(7, 10);
+// 		}
+// 	}
+// }
+
+// \*------------------------------------*/
+
+// /*------------------------------------*\
+// 	$GRIDS
+// \*------------------------------------*/
+
+
+// /* Grid Item */
+// // .grid-item {
+// //  background: $gray-light-2;
+// // }
+
+// .grid-1up {
+// 	@include grid-1up;
+// }
+
+// .grid-2up {
+// 	@include grid-2up;
+// }
+
+// .grid-3up {
+// 	@include grid-3up;
+// }
+
+// .grid-4up {
+// 	@include grid-4up;
+// }

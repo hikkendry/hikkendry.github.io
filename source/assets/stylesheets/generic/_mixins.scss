@@ -1,62 +1,62 @@
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
-/* Grids
-  Usage: @include grid-Xup;
- */
-/* Grid 1up */
-@mixin grid-1up {
-  .grid-item{
-    @include span-columns(12, 12);
-  }
-}
+// /* Grids
+//   Usage: @include grid-Xup;
+//  */
+// /* Grid 1up */
+// @mixin grid-1up {
+//   .grid-item{
+//     @include span(12 of 12);
+//   }
+// }
 
-/* Grid 2up */
-@mixin grid-2up {
-	.grid-item{
+// /* Grid 2up */
+// @mixin grid-2up {
+// 	.grid-item{
 
-	@include grid-1up;
+// 	@include grid-1up;
 
- 		@include at-breakpoint($bp-small 12) {
-			@include span-columns(6, 12);
-    		@include remove-nth-omega(3n);
-    		@include nth-omega(2n);
-		}
- 	}
-}
+//  		@include breakpoint($bp-small) {
+// 			@include span(6 of 12);
+// 		}
+//  	}
+// }
 
-/* Grid 3up */
-@mixin grid-3up {
-  .grid-item{
+// /* Grid 3up */
+// @mixin grid-3up {
+//   .grid-item{
 
-	@include grid-1up;
+// 	@include grid-1up;
 
- 		@include at-breakpoint($bp-small 12) {
-    		@include span-columns(4, 12);
-    		@include remove-nth-omega(2n);
-    		@include nth-omega(3n);
-    	}
-	}
-}
+//  		@include breakpoint($bp-small) {
+//     		@include span(4 of 12);
+//     	}
+// 	}
+// }
 
-/* Grid 4up */
-@mixin grid-4up {
-.grid-item{
+// /* Grid 4up */
+// @mixin grid-4up {
+// .grid-item{
 
-	@include grid-1up;
+// 	@include grid-1up;
 
-	@include at-breakpoint($bp-small 12) {
-		@include span-columns(6, 12);
-    	@include remove-nth-omega(3n);
-    	@include nth-omega(2n);
-	}
+// 	@include breakpoint($bp-small) {
+// 		@include span(6 of 12);
+// 	}
 
-	@include at-breakpoint($bp-large 12) {
-		@include span-columns(3, 12);
-		@include remove-nth-omega(2n);
-		@include nth-omega(4n);
-		}
-	}
+// 	@include breakpoint($bp-large) {
+// 		@include span(3 of 12);
+// 		}
+// 	}
+// }
+
+@mixin vertical-align ($percent) {
+  position: relative;
+  top: $percent;
+  -webkit-transform: translateY(-$percent);
+  -ms-transform: translateY(-$percent);
+  transform: translateY(-$percent);
 }
 
 /* CSS Transition

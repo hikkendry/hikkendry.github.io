@@ -4,23 +4,13 @@
     a href="/"
       == image_tag "assets/images/logo.png", alt: "Hikkendry", class: "logo"
 
-    a.home-link.icon-home href="/"
-      span.is-vishidden Home
+    nav.site-nav
+      ul.inline-list
+        li
+          a href="/work" Work
+        li
+          a href="/about-us" About
+        li
+          a href="/contact" Contact
 
-    a.contact-toggle.contact-toggle-menu.icon-envelope href="#nav"
-      span.is-vishidden Contact
-
-    .vcard.contact.dropdown
-      .org Hikkendry
-
-      .adr
-        .street-address
-          | Studio 1.8
-          br/
-          | 10-14 Rockwell House
-        span.locality London
-        br/
-        span.postal-code EC2A 3NN
-
-        == link_to 'studio@hikkendry.com', 'mailto:studio@hikkendry.com'
   /! End .header

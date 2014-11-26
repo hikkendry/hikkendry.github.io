@@ -1,3 +1,10 @@
+.article-content{
+	img{
+		margin-top: rhythm(4);
+		margin-bottom: rhythm(4);
+	}
+}
+
 //Article
 // .article-header {
 // 	h1 {
@@ -5,39 +12,39 @@
 // 	}
 // }
 
-.byline {
-	font-size: $font-size-slightly-smaller;
-	font-style: italic;
-	margin-bottom: $space-half;
-}
+// .byline {
+// 	font-size: $font-size-slightly-smaller;
+// 	font-style: italic;
+// 	margin-bottom: $space-half;
+// }
 
-/* Wordpress Caption */
-.wp-caption-text {
-	font-style: italic;
-}
+// /* Wordpress Caption */
+// .wp-caption-text {
+// 	font-style: italic;
+// }
 
-// Review Summary
-.review-summary {
-	.grade {
-		width: 4.5em;
-		float: left;
-		margin: 0 $space-half 0 0;
-	}
+// // Review Summary
+// .review-summary {
+// 	.grade {
+// 		width: 4.5em;
+// 		float: left;
+// 		margin: 0 $space-half 0 0;
+// 	}
 
-	.summary-text {
-		margin-left: 5em;
-	}
-}
+// 	.summary-text {
+// 		margin-left: 5em;
+// 	}
+// }
 
-//Social Share
-.social-share {
-	font-size: $font-size-slightly-larger;
+// //Social Share
+// .social-share {
+// 	font-size: $font-size-slightly-larger;
 
-	.icon-twitter{
-		color: $brand-twitter;
-	}
+// 	.icon-twitter{
+// 		color: $brand-twitter;
+// 	}
 
-	.icon-facebook{
-		color: $brand-facebook;
-	}
-}
+// 	.icon-facebook{
+// 		color: $brand-facebook;
+// 	}
+// }

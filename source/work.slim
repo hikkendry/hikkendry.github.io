@@ -2,15 +2,10 @@
 title: Design Solutions
 ---
 .content
-  .block
-    .block-hero
-      ==image_tag ("homepage.png")
-  
-  h1 Clear, effective design
-
   .case-studies
-    - data.projects.take(3).each do |project|
+    - data.projects.each do |project|
       .block.block-inset
         a href= project["title"].parameterize
           .b-thumb
             == image_tag project["thumb"], alt: project["title"]
+            h5= project["title"]

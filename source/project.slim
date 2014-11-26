@@ -1,17 +1,26 @@
-/ Content passed from config.rb
-header.artlicle-header
+---
+title: Design Solutions
+---
+
+.block
+  .block-hero
+    == image_tag content["thumb"], alt: content["title"]
+
+header.article-header
   h1= content['title']
 
 .article-meta
   p.intro= content['intro']
 
-.content
+.article-content
   - content['content'].each do |tag, value|
     - if tag.include? 'p'
       p= value
     - if tag.include? 'img'
       == image_tag value
 
-  .nav-article-footer
-    a.icon-home href="/"
-      span.is-vishidden Home
+.nav-article-footer
+  a.icon-home href="/"
+    span.is-vishidden Home
+
+  h4.subheading == link_to 'Get in touch to discuss your project', '/contact'

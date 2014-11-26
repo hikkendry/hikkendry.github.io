@@ -8,62 +8,80 @@
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+.titling {
 	font-family: $font-titling;
 	font-weight: normal;
 	text-transform: uppercase;
-	letter-spacing: $pad-quarter;
+	letter-spacing: 0.2em;
 }
 
 h1,
 .alpha {
-	@include adjust-font-size-to(36px);
-	margin: rhythm(3, 36px) 0 rhythm(3, 36px) 0; // 3 line above 3 line below
+	@include adjust-font-size-to($h2-fz);
+	margin: rhythm(4, $h2-fz) 0 rhythm(2, $h2-fz) 0; // 2 line above 1 line below
+
+	@include breakpoint($bp-med) {
+		@include adjust-font-size-to($h1-fz);
+		margin: rhythm(8, $h1-fz) 0 rhythm(4, $h1-fz) 0; // 2 line above 1 line below
+	}
 }
 
 h2,
 .beta {
-	@include adjust-font-size-to(30px);
-	margin: rhythm(3, 30px) 0 rhythm(3, 30px) 0; // 3 line above 3 line below
+	@include adjust-font-size-to($h3-fz);
+	margin: rhythm(2, $h3-fz) 0 rhythm(2, $h3-fz) 0; // 2 line above 2 line below
+
+	@include breakpoint($bp-med) {
+		@include adjust-font-size-to($h2-fz);
+		margin: rhythm(0, $h2-fz) 0 rhythm(2, $h2-fz) 0; // 2 line above 2 line below
+	}
 }
 
 h3,
 .gamma  {
-	@include adjust-font-size-to(22px);
-	margin: rhythm(3, 22px) 0 rhythm(3, 22px) 0; // 3 line above 3 line below
+	@include adjust-font-size-to($h4-fz);
+	margin: rhythm(4, $h4-fz) 0 rhythm(4, $h4-fz) 0; // 1 line below
+
+	@include breakpoint($bp-med) {
+		@include adjust-font-size-to($h3-fz);
+		margin: rhythm(4, $h3-fz) 0 rhythm(2, $h3-fz) 0; // 2 line above 2 line below
+	}
 }
 
 h4,
 .delta {
-	@include adjust-font-size-to(20px);
-	margin: 0 0 rhythm(3, 20px) 0; // 1 line below
+	@include adjust-font-size-to($h4-fz);
+	margin: 0 0 rhythm(4, $h4-fz) 0; // 1 line below
 }
 
 h5,
 .epsilon {
-	@include adjust-font-size-to(18px);
-	margin: 0 0 rhythm(3, 18px) 0; // 1 line below
+	@include adjust-font-size-to($h5-fz);
+	margin: 0 0 rhythm(4, $h5-fz) 0; // 1 line below
 }
 
 h6,
 .zeta {
-	@include adjust-font-size-to(16px);
-	margin: 0 0 rhythm(3, 16px) 0; // 1 line below
+	@include adjust-font-size-to($h6-fz);
+	margin: 0 0 rhythm(4, $h6-fz) 0; // 1 line below
 }
 
 .giga {
 	@include adjust-font-size-to(66px);
-    margin: rhythm(3, 66px) 0 rhythm(3, 66px) 0; // 3 line above 3 line below
+    margin: rhythm(4, 66px) 0 rhythm(4, 66px) 0; // 1 line above 1 line below
 }
 
 .mega {
 	@include adjust-font-size-to(56px);
-    margin: rhythm(3, 56px) 0 rhythm(3, 56px) 0; // 3 line above 3 line below
+    margin: rhythm(4, 56px) 0 rhythm(4, 56px) 0; // 1 line above 1 line below
 }
 
 .kilo {
 	@include adjust-font-size-to(46px);
-    margin: rhythm(3, 46px) 0 rhythm(3, 46px) 0; // 3 line above 3 line below
+    margin: rhythm(4, 46px) 0 rhythm(4, 46px) 0; // 1 line above 1 line below
 }
 
 .small {

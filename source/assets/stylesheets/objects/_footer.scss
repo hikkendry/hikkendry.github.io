@@ -1,53 +1,53 @@
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
-// @include scut-sticky-footer(2em page site-footer);
+// // @include scut-sticky-footer(2em page site-footer);
 
-.site-footer {
-	background: $blue;
-	padding:$pad;
-	text-align: center;
-	color: $gray-light-4;
-	@extend .cf;
+// .site-footer {
+// 	background: $blue;
+// 	padding:$pad;
+// 	text-align: center;
+// 	color: $gray-light-4;
+// 	@extend .cf;
 
-	h4 a {
-		color: $white;
-	}
+// 	h4 a {
+// 		color: $white;
+// 	}
 
-	.copyright {
-		@extend .small;
-		color: $gray-light-4;
-	}
+// 	.copyright {
+// 		@extend .small;
+// 		color: $gray-light-4;
+// 	}
 
-	@include at-breakpoint($bp-med 12) {
-		h4 {
-			@include span-columns(6, 12);
-			text-align: left;
-		}
-		.copyright{
-			@include span-columns(6 omega, 12);
-			text-align: right;
-		}
-	}
-}
+// 	@include breakpoint($bp-med) {
+// 		h4 {
+// 			@include span(6 of 12);
+// 			text-align: left;
+// 		}
+// 		.copyright{
+// 			@include span(6 last of 12);
+// 			text-align: right;
+// 		}
+// 	}
+// }
 
 
 
-//Footer Nav
-.nav-footer {
-	margin: (-$pad) (-$pad) $space;
+// //Footer Nav
+// .nav-footer {
+// 	margin: (-$pad) (-$pad) $space;
 
-	li {
-		border-bottom: 1px solid $gray-dark;
+// 	li {
+// 		border-bottom: 1px solid $gray-dark;
 
-		@media all and (min-width: $bp-med) {
-			border: 0;
-			float: left;
-		}
-	}
+// 		@media all and (min-width: $bp-med) {
+// 			border: 0;
+// 			float: left;
+// 		}
+// 	}
 
-	a {
-		display: block;
-		padding: $pad;
-	}
-}
+// 	a {
+// 		display: block;
+// 		padding: $pad;
+// 	}
+// }
