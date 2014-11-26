@@ -13,4 +13,5 @@ gem "middleman-deploy", "~>0.2.3"
 # SASS plugins
 gem "slim", "~> 2.0.2"
 gem "scut", "~> 0.10.2"
-gem "susy", "~> 1.0.9"
+gem "susy", "~> 2.1.3"
+gem "breakpoint", "~> 2.5.0"

@@ -1,5 +1,6 @@
 # Require any additional compass plugins here.
 require "susy"
+require "breakpoint"
 require "scut"
 
 # require 'slim'
@@ -10,6 +11,7 @@ activate :directory_indexes
 set :js_dir, 'assets/javascripts'
 set :css_dir, 'assets/stylesheets'
 set :images_dir, 'assets/images'
+set :frontmatter_extensions, %w(.html .slim)
 
 ready do
   sprockets.append_path File.join root, 'bower_components'
