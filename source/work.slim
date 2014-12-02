@@ -6,6 +6,9 @@ title: Design Solutions
     - data.projects.each do |project|
       .block.block-inset
         a href= project["title"].parameterize
-          .b-thumb
+          figure.effeckt-caption data-effeckt-type='cover-slide-top'
             == image_tag project["thumb"], alt: project["title"]
-            h5= project["title"]
+  	        figcaption
+  	          .effeckt-figcaption-wrap
+    	         	h3= project["title"]
+    	         	span= project["type"]
