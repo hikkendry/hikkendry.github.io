@@ -21,6 +21,9 @@ nav.site-nav{
 
 		&:nth-of-type(2){
 			text-align: center;
+			a{
+				padding-right: .5em;
+			}
 		}
 
 		&:nth-of-type(3){
@@ -39,6 +42,7 @@ nav.site-nav{
 
 	a{
 		@extend .titling;
+		@extend .subheading;
 	}
 }
 
