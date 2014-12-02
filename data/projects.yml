@@ -1,5 +1,6 @@
 - title: The Director Studio
   client: The Director Studio
+  type: Website
   thumb: casestudies/director-studio/directorstudio-homepage.png
   intro: "Intro"
   content:
@@ -8,6 +9,7 @@
 
 - title: Sorn Records
   client: Sorn Records
+  type: Identity
   thumb: casestudies/sorn/sorn-logo.png
   intro: "Intro"
   content:
@@ -16,6 +18,7 @@
 
 - title: Concrete Hermit
   client: Concrete Hermit
+  type: Ecommerce
   thumb: casestudies/concrete-hermit/hermit-homepage.png
   intro: "Intro"
   content:
@@ -24,6 +27,7 @@
 
 - title: Shure UK
   client: Shure
+  type: Website
   thumb: casestudies/ssa/SSA-homepage.png
   intro: "The customer facing UK blog of the worlds leading microphone manufacturer."
   content:
@@ -32,6 +36,7 @@
 
 - title: Hyponik
   client: Hyponik
+  type: Website
   thumb: casestudies/hyponik/Hyponik-homepage.png
   intro: "Full website and strategy overhaul with the leading UK source on underground electronic music."
   content:
@@ -46,6 +51,7 @@
 
 - title: Shure Songwriting Award
   client: Shure
+  type: Website
   thumb: casestudies/ssa/SSA-homepage.png
   intro: "Website and intuitive CMS for the annual songwriting competition hosted by the worlds leading microphone manufacturer."
   content:
@@ -58,6 +64,7 @@
 
 - title: Lucky Fox Identity
   client: Lucky Fox
+  type: Identity
   thumb: casestudies/lucky-fox-brand/lucky-fox-logo.png
   intro: "Website and branding for these talented builders of handcrafted retail environments."
   content:
@@ -72,6 +79,7 @@
 
 - title: Lucky Fox Website
   client: Lucky Fox
+  type: Website
   thumb: casestudies/lucky-fox/LuckyFox-homepage.png
   intro: "Website and branding for these talented builders of handcrafted retail environments."
   content:
@@ -82,6 +90,7 @@
 
 - title: Dynasty Jewellery
   client: Dynasty Jewellery
+  type: Identity
   thumb: casestudies/lucky-fox-brand/lucky-fox-logo.png
   intro: "Intro"
   content:
