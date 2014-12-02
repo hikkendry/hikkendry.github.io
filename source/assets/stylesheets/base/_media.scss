@@ -16,8 +16,6 @@ figure {
 	margin-bottom: $space;
 	img {
 		margin-bottom: $space-quarter;
+		display: block;
 	}
-}
-figcaption, .caption {
-	font-style: italic;
 }
