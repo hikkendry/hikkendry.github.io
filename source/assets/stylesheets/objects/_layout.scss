@@ -18,6 +18,47 @@
 	@include span(full nest);
 }
 
+
+.main{
+	animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .pagenav{
 	margin-top: rhythm(3);
 	margin-bottom: rhythm(3);
@@ -158,45 +199,6 @@
 				@include span(3 of 12 rtl);
 			}
 		}
-
-		// label, input {
-		//     display: inline-block;
-		//     vertical-align: baseline;
-		//     padding-top: $pad-half;
-		//     margin: $pad-half 0;
-		// }
-
-		// input{
-		// 	border: 0;
-
-		// 	@include breakpoint($bp-med) {
-		// 		@include span(7 of 12);
-		// 	}
-		// }
-
-		// input[type=submit]{
-		// 	@include span(3 of 12 rtl);
-		// 	color: $white;
-		// 	background: $plum;
-
-		// }
-
-		// textarea {
-		// 	height: auto;
-		// 	border: 0;
-		// 	//height: rhythm(15);
-		// }
-
-		// label{
-		// 	color: $white;
-		// 	text-align: left;
-		// 	@extend h4;
-		// 	margin: $pad-half 0;
-
-		// 	@include breakpoint($bp-med) {
-		// 		@include span(5 of 12 break);
-		// 	}
-		// }
 	}
 
 	.article-content{
@@ -210,205 +212,9 @@
 	}
 }
 
-// .page{
-// 	@extend .wrapper;
-// 	background: $gray-dark-2;
-// }
-
-/*------------------------------------*\
-    $TEMPLATES
-\*------------------------------------*/
-
-// .case-studies{
-// 	@include grid-1up;
-// 	@extend .cf;
-
-// 	@include breakpoint($bp-large 12) {
-// 		@include grid-3up;
-// 	}
-// }
-
-// .case-studies{
-
-// 	.block{
-// 		padding:$pad;
-
-// 		@include breakpoint($bp-large) {
-// 			@include pad(1);
-// 		}
-// 	}
-
-
-// 	@include breakpoint($bp-med) {
-// 		.b-thumb{
-// 			@include span(7 of 12);
-// 		}
-// 		.b-text{
-// 			@include span(5 last of 12);
-// 		}
-// 		.headline{
-// 			text-align: left;
-// 			color: $gray-med;
-// 		}
-
-// 		@for $i from 2 through 2 {
-// 		    .block:nth-of-type(3n+#{$i}) {
-// 		        background: $gray-light-3;
-
-// 	    		.b-thumb{
-// 					@include span(7 of 12);
-// 					margin-right: 0;
-// 				}
-// 				.b-text{
-// 					@include span(5 last of 12);
-// 					float: left;
-// 				}
-// 		    }
-// 		}
-// 	}
-// }
-
-// .our-approach{
-// 	background: $gray-light-3;
-// 	@include pad(1, 1);
-// 	padding-top: $pad;
-// 	padding-bottom: $pad-double;
-// 	img{
-// 		width:100%;
-// 	}
-// 	//TEMP
-// 	p{
-// 		@extend h4;
-// 		padding: $pad
-// 	}
-// }
-
-// .clients{
-// 	@include grid-3up;
-// 	@extend .cf;
-// 	background-color: $gray-med;
-
-// 	@include breakpoint($bp-large) {
-// 		@include pad(2,2);
-// 	}
-
-// 	.headline{
-// 		color:$white;
-// 	}
-// }
-
-// .main {
-// 	background: $gray-light-4;
-// 	padding: $pad-half $pad $pad-double;
-
-// 	.index &{
-// 		padding:0;
-// 	}
-// }
-
-// .content {
-//   text-align: center;
-
-//   p,
-//   .block-hero {
-//     text-align: left;
-//   }
-
-//   img {
-//     margin: $pad 0;
-
-//     &:nth-of-type(2n):after {
-//       background-color: $gray-light-3;
-//       width: 100%;
-//     }
-//   }
-// }
-
-// @include breakpoint($bp-large) {
-
-// 	.main {
-// 		@include pad(1,1);
-
-// 		.article-meta{
-// 			margin: 0 ;
-// 		}
-// 	}
-// }
-
-
-//  @include breakpoint($bp-xl) {
-//  	.main{
-
-// 		.article-meta{
-// 			@include span(3 of 10 last);
-// 			padding: 0 $pad-double;
-// 		}
-// 		.article-header {
-// 			@include span(10 of 10);
-// 			@include suffix(3);
-// 		}
-// 		.content{
-// 			@include span(7 of 10);
-			
-// 		}
-// 	}
-// }
-
-// .index .main .content{
-// 	@include span(12 of 12);
-// }
-
-// /*------------------------------------*\
-// 	THIS TO FIX THE ARTICLE META
-
-// 	@include breakpoint($bp-xl 12) {
-// 	.main{
-// 		.article-meta{
-// 			@include container;
-// 			padding: 0;
-// 			position: fixed;
-// 			right: 0;
-// 			height: 0;
-
-// 			.intro{
-// 				@include span(3 last, 12);
-// 				padding: 0 $pad-double;
-// 			}
-// 		}
-// 		.article-header {
-// 			@include span(10, 10);
-// 			@include suffix(3);
-// 		}
-// 		.content{
-// 			@include span(7, 10);
-// 		}
-// 	}
-// }
-
-// \*------------------------------------*/
-
-// /*------------------------------------*\
-// 	$GRIDS
-// \*------------------------------------*/
-
-
-// /* Grid Item */
-// // .grid-item {
-// //  background: $gray-light-2;
-// // }
-
-// .grid-1up {
-// 	@include grid-1up;
-// }
-
-// .grid-2up {
-// 	@include grid-2up;
-// }
-
-// .grid-3up {
-// 	@include grid-3up;
-// }
-
-// .grid-4up {
-// 	@include grid-4up;
-// }
+.stuck{
+	@include breakpoint($bp-large) {
+		position: fixed;
+		top: 100px;
+	}
+}

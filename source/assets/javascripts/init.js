@@ -7,32 +7,41 @@
 		$('.contact.dropdown', $nav).toggleClass('active');
 	});
 
-	$("#contactForm").validate({
-		debug: true,
-		rules: {
-			name: {
-				required: true
-			},
-			body: {
-				required: true
-			},
-			email: {
-				required: true,
-				email: true
-			}
+	$(function() {
+		if (location.hash === '#contact') {
+			$('#contactForm').validate({
+				debug: true,
+				rules: {
+					name: {
+						required: true
+					},
+					body: {
+						required: true
+					},
+					email: {
+						required: true,
+						email: true
+					}
+				}
+			});
 		}
+	});
 
-		// submitHandler: function(form) {
-		// 	$.ajax({
-		// 		dataType: 'jsonp',
-		// 		url: "http://getsimpleform.com/messages/ajax?form_api_token=15ac098803f482a821d466247d285c2c",
-		// 		data: $("#contactForm").serialize()
-		// 	}).done(function() {
-		// 		//callback which can be used to show a thank you message
-		// 		//and reset the form
-		// 		window.location.href = "/confirm";
-		// 	});
-		// }
+
+	//Waypoints for sticky meta
+	$(function() {
+		var $el = $('.intro')
+		$el.width($el.parent().outerWidth())
+		if (location.hash != '#contact' || 'work' || 'about-us' || '') {
+			$($el).waypoint('sticky', {
+				offset: 100 // Apply "stuck" when element 30px from top
+			});
+
+			// set the width of the intro div when window resizes
+			window.addEventListener('resize', function() {
+				$el.width($el.parent().outerWidth())
+			})
+		}
 	});
 
 })(this, jQuery);
