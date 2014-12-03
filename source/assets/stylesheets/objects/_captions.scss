@@ -56,7 +56,12 @@ offset | guillotine-reverse | half-slide | sqkwoosh | tunnel>"
     text-align: center;
 
     h3{
-      margin-top: 0;
+      @extend h5;
+      margin: 0 0 rhythm() 0;
+    }
+
+    span{
+      @extend .small;
     }
   }
 

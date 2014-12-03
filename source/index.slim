@@ -1,15 +1,19 @@
 ---
 title: Design Solutions
 ---
+- data.projects.inspect
 .content
   .block
-    .block-hero
-      ==image_tag ("homepage.png")
+    #carousel.block-hero
+      - data.projects[0, 3].each do |project|
+        .item
+          a href= project["title"].parameterize
+            == image_tag project["thumb"], alt: project["title"]
   
   h1 Clear, effective design
 
   .case-studies
-    - data.projects.take(3).each do |project|
+    - data.projects[4, 3].each do |project|
       .block.block-inset
         a href= project["title"].parameterize
           figure.effeckt-caption data-effeckt-type='cover-slide-top'

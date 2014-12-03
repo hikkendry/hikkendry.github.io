@@ -125,24 +125,18 @@
 	}
 
 	.clients{
+		@include span(12 of 12);
+		margin-bottom: rhythm(2);
+
 		h3{
 			margin-top: 0;
 			@extend h5;
 		}
 
-		.grid-item{
-			@include span(6 of 12 nest);
-
-			@include breakpoint($bp-small-2) {
-				@include span(4 of 12 nest);
-			}
-
-			@include breakpoint($bp-med-2) {
-				@include span(50% of 5 nest);
-			}
-
-			@include breakpoint($bp-xxl) {
-				@include span(33.33% of 5 nest);
+		.owl-item{
+			padding: 0 2em;
+			@include breakpoint($bp-med) {
+				padding: 0 3em;
 			}
 		}
 	}

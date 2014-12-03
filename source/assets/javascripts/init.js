@@ -27,12 +27,34 @@
 		}
 	});
 
+	$(function() {
+		if (window.location.href.match('')) {
+			$('#carousel').owlCarousel({
+				slideSpeed: 300,
+				singleItem: true,
+				transitionStyle: 'fade',
+				autoPlay: 4000
+			});
+		}
+	});
+
+	//initialize client logo slider
+	if (window.location.href.match('about-us')) {
+		$('#carousel').owlCarousel({
+			slideSpeed: 300,
+			autoPlay: 4000,
+			items: 4,
+			itemsTablet: false,
+			itemsMobile: [479, 2]
+		});
+	}
+
 
 	//Waypoints for sticky meta
 	$(function() {
 		var $el = $('.intro')
 		$el.width($el.parent().outerWidth())
-		if (location.hash != '#contact' || 'work' || 'about-us' || '') {
+		if (window.location.href != 'contact' || 'work' || 'about-us' || '') {
 			$($el).waypoint('sticky', {
 				offset: 100 // Apply "stuck" when element 30px from top
 			});

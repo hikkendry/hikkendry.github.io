@@ -22,7 +22,17 @@
         overflow: hidden;
 
         @include breakpoint($bp-med) {
+            @include span(6 of 12);
+            &:nth-of-type(2n+1){
+                clear: both;
+            }
+        }
+
+        @include breakpoint($bp-large-2) {
     		@include span(4 of 12);
+            &:nth-of-type(2n+1){
+                clear: none;
+            }
             &:nth-of-type(3n+1){
                 clear: both;
             }
@@ -30,8 +40,19 @@
 	}
 }
 
-// .b-thumb {
-//      img {
-//         margin-bottom: rhythm(2);
-//      }
-//  }
+.index .case-studies .block-inset{
+    @include breakpoint($bp-med) {
+        &:nth-of-type(2n+1){
+            clear: none;
+        }
+        &:nth-of-type(3n+1){
+            display: none;
+        }
+    }
+
+    @include breakpoint($bp-large-2) {
+        &:nth-of-type(3n+1){
+            display: block;
+        }
+    }
+}
