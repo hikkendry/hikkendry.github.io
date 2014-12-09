@@ -4,7 +4,7 @@ title: About us
 
 .block
   .block-hero
-    ==image_tag ("model.png")
+    ==image_tag 'model.png', srcset: "#{image_path('model.png')} 1x, #{image_path('model.png')} 2x, #{image_path('model.png')} 3x"
 
 header.article-header
   h1 About us
