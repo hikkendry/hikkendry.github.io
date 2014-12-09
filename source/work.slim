@@ -7,7 +7,8 @@ title: Design Solutions
       .block.block-inset
         a href= project["title"].parameterize
           figure.effeckt-caption data-effeckt-type='cover-slide-top'
-            == image_tag project["thumb"], alt: project["title"]
+            .delayed-image-load data-src='#{image_path project["thumb"]}{width}.jpg'
+            /== image_tag project["thumb"], srcset: "#{image_path({width})} 2x, #{image_path('strip.jpg')} 3x"
   	        figcaption
   	          .effeckt-figcaption-wrap
     	         	h3= project["title"]
