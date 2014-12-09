@@ -69,19 +69,34 @@
 	}
 }
 
-.index h1 {
+.index h1.epsilon{
+	margin: rhythm(2, $h5-fz) 0 rhythm(2, $h5-fz) 0;
+	text-align: center;
+	display: none;
+
+	@include breakpoint($bp-med) {
+		display: block;
+	}
+
+	&.last{
+		margin-bottom: rhythm(6, $h5-fz)
+	}
+}
+
+.index h1.alpha {
+	margin: 0;
 	@include adjust-font-size-to($h3-fz);
-	margin: rhythm(2, $h3-fz) 0 rhythm(4, $h3-fz) 0; // 1 line above 2 line below
+	//margin: rhythm(2, $h3-fz) 0 rhythm(4, $h3-fz) 0; // 1 line above 2 line below
 	text-align: center;
 
 	@include breakpoint($bp-small) {
 		@include adjust-font-size-to($h2-fz);
-		margin: rhythm(4, $h2-fz) 0 rhythm(8, $h2-fz) 0; // 1 line above 2 line below
+		//margin: rhythm(4, $h2-fz) 0 rhythm(8, $h2-fz) 0; // 1 line above 2 line below
 	}
 
 	@include breakpoint($bp-med-2) {
 		@include adjust-font-size-to($h1-fz);
-		margin: rhythm(4, $h1-fz) 0 rhythm(8, $h1-fz) 0; // 1 line above 2 line below
+		//margin: rhythm(4, $h1-fz) 0 rhythm(8, $h1-fz) 0; // 1 line above 2 line below
 	}
 }
 
@@ -204,6 +219,10 @@
 	h2.org{
 		margin-top: 0;
 	}
+}
+
+.sticky-wrapper{
+	margin-bottom: rhythm(4);
 }
 
 .stuck{

@@ -49,6 +49,14 @@
 		});
 	}
 
+	new Imager({
+		availableWidths: {
+			320: '_sm',
+			500: '_m',
+			786: '_l',
+			1360: '_xl'
+		}
+	});
 
 	//Waypoints for sticky meta
 	$(function() {

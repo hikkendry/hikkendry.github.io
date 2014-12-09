@@ -8,16 +8,17 @@ title: Design Solutions
       - data.projects[0, 3].each do |project|
         .item
           a href= project["title"].parameterize
-            == image_tag project["thumb"], alt: project["title"]
-  
-  h1 Clear, effective design
+            == image_tag project["default"], alt: project["title"]
+  h1.epsilon We're Hikkendry, a studio in London providing
+  h1.alpha Clear, effective design
+  h1.epsilon.last for digital and print
 
   .case-studies
     - data.projects[4, 3].each do |project|
       .block.block-inset
         a href= project["title"].parameterize
           figure.effeckt-caption data-effeckt-type='cover-slide-top'
-            == image_tag project["thumb"], alt: project["title"]
+            .delayed-image-load data-src='#{image_path project["thumb"]}{width}.jpg' data-alt='#{project["title"]}'
             figcaption
               .effeckt-figcaption-wrap
                 h3= project["title"]
