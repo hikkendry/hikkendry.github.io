@@ -88,6 +88,7 @@
   default: casestudies/shure/shure_uk_blog_website_xl.jpg
   intro: "Shure are the worlds leading microphone maufacturer. We provided their uk opperation with a fresh customer-facing blog."
   content:
+    p1: "We transfered their existing blog to a self hosted wordpress install and created a bespoke responsive theme that works accross desktop, tablet and mobile devices. We created clear sections for content and re-assigned existing posts within the new structure."
     img1: casestudies/shure/shure_blog_home
     img2: casestudies/shure/shure_blog_category
     img3: casestudies/shure/shure_blog_article
@@ -135,7 +136,7 @@
   type: Identity
   thumb: casestudies/lucky-fox-brand/lucky_fox_identity
   default: casestudies/lucky-fox-brand/lucky_fox_identity_xl.jpg
-  intro: "Website and branding for these talented builders of handcrafted retail environments."
+  intro: "Branding for these talented builders of handcrafted retail environments."
   content:
     p1: "If you’re a bunch of talented creative retail designers you’re going to need a stand out identity and unique website. That’s why Lucky Fox came to us. After years building dazzling bespoke window installations and interiors for Levis, Harvey Nichols and Converse (to name but a few) Jason Traves decided to form his own retail design outfit and Lucky Fox was born."
     p2: "As a man of impeccable taste with a keen eye for design we knew his branding and website needed to be clean and iconic. We delivered a carefully considered branding package and style guide that they’ve been able to apply in a range of creative ways from a customised ice-cream van to laser etched wood and even sticks of brighton rock!"
@@ -149,10 +150,10 @@
   type: Website
   thumb: casestudies/lucky-fox/lucky_fox_website
   default: casestudies/lucky-fox/lucky_fox_website_xl.jpg
-  intro: "Website and branding for these talented builders of handcrafted retail environments."
+  intro: "Custom wordpress website for these talented builders of handcrafted retail environments."
   content:
     p1: "If you’re a bunch of talented creative retail designers you’re going to need a stand out identity and unique website. That’s why Lucky Fox came to us. After years building dazzling bespoke window installations and interiors for Levis, Harvey Nichols and Converse (to name but a few) Jason Traves decided to form his own retail design outfit and Lucky Fox was born."
-    p2: "As a man of impeccable taste with a keen eye for design we knew his branding and website needed to be clean and iconic. We delivered a carefully considered branding package and style guide that they’ve been able to apply in a range of creative ways from a customised ice-cream van to laser etched wood and even sticks of brighton rock!"
+    p2: "As a man of impeccable taste with a keen eye for design we knew his branding and website needed to be clean and iconic."
     img1: casestudies/lucky-fox/lucky_fox_home
     img2: casestudies/lucky-fox/lucky_fox_work
     img3: casestudies/lucky-fox/lucky_fox_project
@@ -164,7 +165,7 @@
   type: Website
   thumb: casestudies/cds-group/cds_group_website
   default: casestudies/cds-group/cds_group_website_xl.jpg
-  intro: "Website and branding for these talented builders of handcrafted retail environments."
+  intro: "This portfolio site showcases the projects of the CDS group. Built using a custom wordpress install with a bespoke theme"
   content:
     img1: casestudies/cds-group/cds_home
     img2: casestudies/cds-group/cds_project
@@ -176,7 +177,7 @@
   type: Website
   thumb: casestudies/dynasty-jewellery/dynasty_website
   default: casestudies/dynasty-jewellery/dynasty_website_xl.jpg
-  intro: "Cost effective ecommerce solution for small london jewellery company"
+  intro: "We produced this cost effective ecommerce solution for small london jewellery company using the Shopify platform."
   content:
     img1: casestudies/dynasty-jewellery/dynasty_home
     img2: casestudies/dynasty-jewellery/dynasty_category
