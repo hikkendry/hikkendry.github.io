@@ -1,3 +1,7 @@
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
 .logo{
 	@include span(6 of 12 nest);
 
@@ -14,84 +18,16 @@
 	}
 }
 
-// .header {
-// 	padding: 0;
-// 	text-align: center;
-// 	color: $white;
+.main, .pagenav{
+	@include span(full nest);
+}
 
-// 	@include breakpoint($bp-large) {
-// 		border: none;
-// 		text-align: left;
-// 		background-image: url(/assets/images/strip.jpg);
-// 		background-repeat: repeat-x;
-// 		padding-top: 9px;
-// 	}
-// }
+.pagenav{
+	margin-top: rhythm(3);
+	margin-bottom: rhythm(3);
 
-// .logo {
-// 	//@include scut-center-absolutely(15em n);
-// 	// @include scut-center-block(50%);
-// 	max-width: 10em;
-// 	padding-top: $pad;
-	
-
-// @include breakpoint($bp-large) {
-// // 		//padding:$pad-double;
-//  		max-width: 15rem;
-// // 	// 	position: static;
-// // 	// 	margin:0;
-// 		padding:$pad-double;
-// // 	// 	max-width: 9em;
-//  	}
-// }
-
-// .nav-toggle {
-// 	float: left;
-// 	display: block;
-// 	padding: 0.9rem 1rem 0.7rem;
-// 	font-size: 1.3rem;
-// 	line-height: 1;
-// 	border-right: 1px solid $gray-med;
-
-
-// 	@include breakpoint($bp-large) {
-// 		display: none;
-// 	}
-// }
-
-// .home-link {
-// 	@extend .nav-toggle;
-// }
-
-// .contact-toggle{
-// 	float: right;
-// 	display: block;
-// 	padding: 0.9rem 1rem 0.7rem;
-// 	font-size: 1.3rem;
-// 	line-height: 1;
-// 	border-left: 1px solid $gray-med;
-
-// 	@include breakpoint($bp-large) {
-// 		font-size: 2rem;
-// 		padding: 1.9rem;
-// 	}
-// }
-
-// .home-link, .contact-toggle{
-// 	color: $gray-light-4;
-
-// 	&:hover{
-// 		color:$link-color-hover;
-// 	}
-// }
-
-// .search-form {
-// 	overflow: hidden;
-// 	max-height: 0;
-
-// 	@include breakpoint($bp-large) {
-// 		float: right;
-// 		max-height: none;
-// 		margin: 0.65em 0.5em 0 0;
-// 	}
-// }
+	@include breakpoint($bp-med) {
+		margin-top: rhythm(6);
+		margin-bottom: rhythm(6);
+	}
+}
