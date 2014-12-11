@@ -13,6 +13,7 @@ set :css_dir, 'assets/stylesheets'
 set :images_dir, 'assets/images'
 set :frontmatter_extensions, %w(.html .slim)
 
+
 ready do
   sprockets.append_path File.join root, 'bower_components'
 end
@@ -34,6 +35,7 @@ end
 configure :build do
   activate :minify_css
   activate :minify_javascript
+  activate :minify_javascript, :compressor => Uglifier.new( output: { comments: none } )
   activate :asset_hash
 
   activate :imageoptim do |options|
@@ -62,6 +64,6 @@ configure :build do
     config.output_style = :compact
   end
 
-  # activate :relative_assets
-  # set :relative_links, true
+  activate :relative_assets
+  set :relative_links, true
 end
